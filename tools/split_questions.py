@@ -14,6 +14,10 @@ Run from the repository root:
     python tools/split_questions.py --check  report what would be written
     python tools/split_questions.py --force  perform or redo the split
 
+The split consumes its source: it rewrites the document it read as an index.
+Redoing it therefore means restoring that document from git first, and the
+tool says so rather than failing on a half-parsed file.
+
 Like `tools/split_framework.py`, it is destructive after the fact: the
 question documents are the editable source once written, so overwriting them
 requires --force. It is kept as provenance for the `affects` mapping below,
@@ -64,6 +68,20 @@ reading aid rather than an answer.
 """
 
 
+LINK_RE = re.compile(r"\]\((?!https?://|#|mailto:)([^)]+)\)")
+
+
+def rebase_links(text: str) -> str:
+    """Shift relative links down one directory level.
+
+    The question text was written inside governance/ and its links assume that
+    depth. Moved into governance/open-questions/ they would all point one level
+    too high, which the corpus gate reports as dangling rather than silently
+    tolerating.
+    """
+    return LINK_RE.sub(lambda m: f"]({'../' + m.group(1)})", text)
+
+
 def slugify(text: str) -> str:
     kept = []
     for char in text:
@@ -75,6 +93,15 @@ def slugify(text: str) -> str:
 
 
 def parse_questions(body: str) -> tuple[str, list[tuple[int, str, str, list[str], str]]]:
+    if "### Q1 " not in body:
+        raise SystemExit(
+            f"{SRC.relative_to(ROOT).as_posix()} no longer contains the question "
+            "sections.\n"
+            "The split has already run and rewrote that document as an index, so "
+            "this tool has consumed its own source.\n"
+            "To redo the split, restore the original first:\n"
+            "    git checkout <commit-before-the-split> -- governance/open-questions.md"
+        )
     preamble, _, rest = body.partition("### Q1 —")
     rest = "### Q1 —" + rest
 
@@ -86,7 +113,7 @@ def parse_questions(body: str) -> tuple[str, list[tuple[int, str, str, list[str]
             raise SystemExit(f"unparseable question heading: {head!r}")
         number, title = int(m.group(1)), m.group(2).strip()
 
-        lines = [l for l in content.strip().splitlines() if l.strip()]
+        lines = [rebase_links(l) for l in content.strip().splitlines() if l.strip()]
         question = lines[0].strip().strip("*")
 
         provisional = ""
