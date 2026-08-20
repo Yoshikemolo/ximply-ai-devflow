@@ -9,12 +9,13 @@ supersedes: []
 related:
   - AI-KNOW-005
   - AI-GOV-006
+  - OQ-0011
 ---
 
 <!-- nav:start -->
 `AI-DEC-002` &middot; status **proposed** &middot; domain [`decisions/`](./)
 
-**Related** &mdash; [Addressable Knowledge `AI-KNOW-005`](../knowledge/addressable-knowledge.md) &middot; [Open Questions `AI-GOV-006`](../governance/open-questions.md)
+**Related** &mdash; [Addressable Knowledge `AI-KNOW-005`](../knowledge/addressable-knowledge.md) &middot; [Open Questions `AI-GOV-006`](../governance/open-questions.md) &middot; [Addressable documentation `OQ-0011`](../governance/open-questions/OQ-0011-addressable-documentation.md)
 <!-- nav:end -->
 # Context
 

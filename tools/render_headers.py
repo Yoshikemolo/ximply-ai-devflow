@@ -9,7 +9,7 @@ This tool derives a rendered header from the front matter of each document and
 writes it between the `nav:start` and `nav:end` markers:
 
     identifier, status and a link to the domain folder
-    every `related` identifier, as a link to that document
+    every `related` and `affects` identifier, as a link to that document
     every `source` entry, as a link to the section of the trunk document
 
 Nothing here is authored. The front matter remains the single place a fact is
@@ -138,6 +138,16 @@ def render_block(doc: Path, front: dict, index: dict[str, tuple[Path, str]], hea
             path, title = target
             items.append(f"[{title} `{ref}`]({relative(doc, path)})")
         lines.append("**Related** &mdash; " + " &middot; ".join(items))
+
+    affects = front.get("affects") or []
+    if affects:
+        items = []
+        for ref in affects:
+            target = index.get(ref)
+            if target is None:
+                raise SystemExit(f"{doc}: affects identifier {ref} does not resolve")
+            items.append(f"[{target[1]} `{ref}`]({relative(doc, target[0])})")
+        lines.append("**Would change** &mdash; " + " &middot; ".join(items))
 
     supersedes = front.get("supersedes") or []
     if not isinstance(supersedes, list):
