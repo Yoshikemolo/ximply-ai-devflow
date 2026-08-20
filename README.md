@@ -1,63 +1,157 @@
 # AI-Assisted Software Engineering Framework
 
-Working draft of an engineering standard for software development assisted by
-AI systems. It proposes how AI participates in engineering work, where the
-human boundary sits, and what verification a change must pass before it is
-allowed to cross into a shared branch.
+A proposed engineering standard for software development assisted by AI
+systems: where AI fits, what stays human, and what a change must prove before
+it is allowed to become accepted software.
 
-The document is the product of this repository. There is no application code.
+**Nothing here is in force.** Every document is a proposal open to challenge.
+Requirement levels — MUST, SHOULD, MAY — express *the strength being proposed
+for that item*, not an obligation. See
+[Purpose, Scope and Normative Language](principles/purpose-and-scope.md).
 
-## Contents
+## What this repository is
 
-| Path | Description |
-|------|-------------|
-| `AI-Assisted Software Engineering Framework - draft EN202608161000.md` | Authoritative source of the framework |
-| `AI-Assisted Software Engineering Framework - draft EN202608161000.docx` | Derived distribution format |
-| `AI-Assisted Software Engineering Framework - draft EN202608161000.pdf` | Derived distribution format |
-| `docs/ai/` | Versioned engineering instructions that govern work in this repository |
-| `.claude/skills/` | Agent skills that apply those instructions |
+The framework itself, as an addressable corpus: fifty-one documents grouped by
+the engineering question they answer, each with a stable identifier, a status
+and a record of where it came from.
 
-The Markdown file is the only editable form. The DOCX and PDF are generated
-from it and are committed so a reviewer can read the document without a
-conversion toolchain; they are regenerated, never edited directly.
+## What it is not
 
-The document is structured in two parts:
+Not a tool manual, not a product, and not a description of any particular
+agent. An implementation applies this framework; it does not define it.
 
-- **Part I — Proposed Engineering Standard**, sections 1 to 71.
-- **Part II — Implementation Profile**, annexes A to C: reference CI harness
-  configurations, proposed quality gate baselines and a draft Pull Request
-  declaration.
+Not a finished standard either. The corpus is complete in the sense that the
+whole draft has been placed, not in the sense that it has been agreed.
 
-Section 71, *Open Questions and Decisions Required*, lists what the draft
-deliberately leaves undecided.
+## The idea it rests on
 
-## Working in this repository
+Most of the framework is one argument followed through its consequences:
 
-This repository applies the framework to itself. The rules below are not
-stylistic preferences; each one is the repository-level expression of a
-section of the document.
+```text
+repository as source of truth
+    → living documentation
+        → context economy
+            → selective retrieval
+                → minimum necessary context
+                    → intellectual property protection
+                        → internal agent layer, querying it all back
+```
 
-**Commits.** English, no emoji, no attribution trailers, one logical change per
-commit. The full rule is in [`docs/ai/commits.md`](docs/ai/commits.md).
+Weaken any link and the ones after it stop working. Read backwards, the same
+chain describes the useful end state — not a model trained on everything the
+organization has, but an ordinary model authorized to query a well-structured
+corpus under the identity and permissions of the person asking.
 
-**Branches.** Work happens outside protected branches, on `feature/*`,
-`fix/*`, `refactor/*` or `technical/*`, and reaches `main` through a Pull
-Request reviewed by a human. An AI assistant does not push to a protected
-branch, merge into one, or approve a Pull Request.
+This repository is the first attempt to build such a corpus.
+[Engineering Principles](principles/engineering-principles.md) develops the
+chain in full.
 
-**Documentation.** `/docs` is part of the product. A change that contradicts
-documented behavior is incomplete until the documentation moves with it.
+## Domains
 
-**Private configuration.** Local agent state, settings and credentials stay
-out of version control. Reviewed, reusable engineering instructions belong in
-`/docs/ai`, which is versioned with the work it governs.
+| Domain | Question it answers | Documents |
+|--------|--------------------|-----------|
+| [`principles/`](principles/) | What do we believe, and who is accountable? | 4 |
+| [`ai-foundations/`](ai-foundations/) | What are we actually governing? | 4 |
+| [`knowledge/`](knowledge/) | How does engineering knowledge stay true and findable? | 5 |
+| [`security/`](security/) | What may an agent know, and what may it do? | 7 |
+| [`agentic-engineering/`](agentic-engineering/) | How do we work with agents in practice? | 6 |
+| [`verification/`](verification/) | What counts as proof that generated code is correct? | 6 |
+| [`integration/`](integration/) | What has to happen before a change is accepted? | 6 |
+| [`engineering-changes/`](engineering-changes/) | How do we make specific kinds of risky change? | 3 |
+| [`governance/`](governance/) | How does the framework itself stay alive? | 7 |
+| [`profiles/`](profiles/) | What does this look like on a concrete stack? | 3 |
+| [`decisions/`](decisions/) | How did we get here, and what did we reject? | 3 |
 
-**Context boundary.** Minimum required context. A large context window is not
-permission to supply unnecessary information, and sensitivity is a property of
-the accumulated context rather than of any single file in it.
+## Where to find things
+
+| If you want to know | Read |
+|---------------------|------|
+| What we can put into an AI context | [AI Context Boundary](security/ai-context-boundary.md) |
+| Why that limit is not just about secrets | [Agentic Security Boundary](security/agentic-security-boundary.md) |
+| How much an agent is allowed to do alone | [AI Autonomy Levels](ai-foundations/autonomy-levels.md) |
+| What an agent may execute | [Shell and Tool Execution](security/tool-execution.md) |
+| Where AI must not decide | [Human Accountability](principles/human-accountability.md) |
+| Why AI confidence is not evidence | [Agentic Bias](ai-foundations/agentic-bias.md) |
+| Why bigger context is not better context | [Context Economy](ai-foundations/context-economy.md) |
+| What has to be true before merging | [Definition of Done](integration/definition-of-done.md) |
+| How a change reaches `main` | [AI-Assisted Development Cycle](integration/ai-assisted-development-cycle.md) |
+| How we test AI-generated code | [Testing Strategy](verification/testing-strategy.md) |
+| Why the tests cannot be trusted to the generator | [Verification Independence](verification/verification-independence.md) |
+| What is still undecided | [Open Questions](governance/open-questions.md) |
+| How something gets decided | [Decision Process](governance/decision-process.md) |
+
+## Reading a document
+
+Every document opens with front matter:
+
+```yaml
+id: AI-SEC-001          # stable identifier, cite this rather than a path
+status: proposed        # proposed | accepted | deprecated | superseded | rejected
+applies_to: [...]       # where it is meant to bite
+related: [...]          # identifiers this document links to
+source: [...]           # where in the draft it came from
+```
+
+`status` is the field that matters. Everything is currently `proposed`.
+
+Passages marked `> **Discussion point.**` are places where the wording is a
+provisional position rather than a conclusion. They are the best places to
+start arguing.
+
+## How to propose a change
+
+Small changes — a correction, a clarification, a better example — go straight
+to a Pull Request against the document.
+
+Anything that changes what the framework asks for opens a decision record
+under [`decisions/`](decisions/) first. The record carries the argument; the
+domain document is updated when the record is accepted.
+
+Participation is open throughout. Not having been in an earlier discussion
+does not remove anyone's voice, and it does not create a retrospective veto
+either. See [Decision Process](governance/decision-process.md), and
+[CONTRIBUTING.md](CONTRIBUTING.md) for the mechanics.
+
+## Order of discussion
+
+The corpus is complete; the consensus is not. Opening every domain at once
+would produce noise rather than agreement, so discussion proceeds in waves.
+
+| Wave | Domains | Question |
+|------|---------|----------|
+| 1 | `principles/`, `ai-foundations/` | What is AI in our process, and who stays accountable? |
+| 2 | `knowledge/`, `security/` | What may an agent know, and how do we build a corpus worth querying? |
+| 3 | `agentic-engineering/` | How much autonomy do we actually want to allow? |
+| 4 | `verification/` | What does it mean to demonstrate that generated code is correct? |
+| 5 | `integration/` | What has to happen before we accept a change? |
+| 6 | `governance/` | How do we keep this alive without turning it into bureaucracy? |
+
+Implementation profiles follow, per stack.
+
+## The original document
+
+[`compiled/`](compiled/) holds the draft the corpus was derived from, frozen at
+revision EN202608161000, in Markdown, DOCX and PDF.
+
+It is a snapshot, not an output, and it will drift. The domain documents are
+authoritative — see [AI-DEC-003](decisions/AI-DEC-003-invert-the-source-of-truth.md).
+A build that compiles the corpus back into a single readable document does not
+exist yet and is the reverse of `tools/split_framework.py`, which performed the
+original split and is kept as provenance for it.
+
+## Working on this repository
+
+Rules for contributors and assistants working *on* this repository — as
+distinct from the framework it contains — live under [`docs/ai/`](docs/ai/).
+The framework asks for exactly that separation: reviewed, reusable engineering
+instructions versioned alongside the work they govern, and private agent
+configuration kept out.
+
+- [Commit Convention](docs/ai/commits.md) — English, no emoji, no attribution
+  trailers, one logical change per commit.
+- [`.claude/skills/`](.claude/skills/) — agent skills that apply those rules.
+  Everything else under `.claude/` is private and untracked.
 
 ## Status
 
-Draft. The standard is under discussion and is not yet ratified. Normative
-language in the document (`MUST`, `SHOULD`, `MAY`) states the proposal, not an
-adopted obligation.
+Draft. Under discussion. Not ratified, not adopted, not enforced.
