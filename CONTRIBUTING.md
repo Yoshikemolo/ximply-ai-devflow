@@ -88,6 +88,13 @@ describes:
   version control and under review. Private agent configuration, session state
   and credentials do not; `.claude/` is untracked apart from
   `.claude/skills/`.
+- Use the skills rather than improvising. Finding knowledge is
+  `navigate-engineering-knowledge`; deciding whether a change needs a
+  documentation update is `documentation-impact-analysis`; making that update is
+  `maintain-engineering-documentation`; auditing the corpus is
+  `validate-knowledge-graph`. They are listed in the [README](README.md).
+- A skill is engineering instruction like any other document here. If one is
+  wrong, fix it in a Pull Request rather than working around it.
 
 The history records what changed and why, not who or what typed it. That is a
 deliberate position, recorded in

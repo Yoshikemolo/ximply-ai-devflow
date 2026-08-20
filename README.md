@@ -152,8 +152,21 @@ configuration kept out.
 
 - [Commit Convention](docs/ai/commits.md) — English, no emoji, no attribution
   trailers, one logical change per commit.
-- [`.claude/skills/`](.claude/skills/) — agent skills that apply those rules.
-  Everything else under `.claude/` is private and untracked.
+
+Agent skills under [`.claude/skills/`](.claude/skills/) turn the corpus into
+behaviour. The documents describe the knowledge; the skills describe how to act
+using it. Everything else under `.claude/` is private and untracked.
+
+| Skill | Use it to |
+|-------|-----------|
+| [`navigate-engineering-knowledge`](.claude/skills/navigate-engineering-knowledge/SKILL.md) | Find the smallest authoritative set of documents a task needs |
+| [`documentation-impact-analysis`](.claude/skills/documentation-impact-analysis/SKILL.md) | Decide whether a change affects documented behaviour, without editing |
+| [`maintain-engineering-documentation`](.claude/skills/maintain-engineering-documentation/SKILL.md) | Update the corpus so it stays true, and keep the gate green |
+| [`validate-knowledge-graph`](.claude/skills/validate-knowledge-graph/SKILL.md) | Audit identifiers, relationships and normative contradictions |
+| [`commit`](.claude/skills/commit/SKILL.md) | Apply the commit convention |
+
+Decision management and framework compilation are deliberately absent until the
+first four have been used enough to know what they got wrong.
 
 ## Status
 
