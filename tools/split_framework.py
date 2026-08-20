@@ -11,12 +11,18 @@ derived from, so the derivation stays auditable.
 
 Run from the repository root:
 
-    python tools/split_framework.py          write the corpus
-    python tools/split_framework.py --check  report coverage and dangling refs
+    python tools/split_framework.py --check  report coverage
+    python tools/split_framework.py --force  rewrite the corpus from the draft
 
-The tool is kept in the repository as provenance for the corpus. It will be
-retired once the domain documents become the editable source and the draft
-becomes a compiled view rather than the origin.
+The direction of derivation has already inverted: the domain documents are the
+editable source and the draft under compiled/ is a frozen snapshot of where
+they came from. Re-running this tool therefore DESTROYS hand edits, which is
+why writing over existing files requires --force.
+
+It is kept in the repository as provenance for the split, and to make the
+derivation checkable against the draft rather than merely asserted. It will be
+retired once a build exists that compiles the corpus into a document, which is
+the reverse of what this does.
 """
 
 from __future__ import annotations
@@ -280,6 +286,15 @@ def main() -> int:
         else:
             print("NOT MAPPED: none")
         return 1 if missing else 0
+
+    force = "--force" in sys.argv
+    existing = [e["path"] for e in MAP if (ROOT / e["path"]).exists()]
+    if existing and not force:
+        print(f"{len(existing)} corpus documents already exist.")
+        print("The domain documents are now the editable source; rewriting them from")
+        print("the draft would destroy any edit made since the split.")
+        print("Re-run with --force only if that is genuinely what you want.")
+        return 1
 
     for entry in MAP:
         target = ROOT / entry["path"]
