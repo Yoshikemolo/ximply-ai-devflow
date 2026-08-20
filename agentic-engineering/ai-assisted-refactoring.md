@@ -17,6 +17,12 @@ source:
 
 Behaviour-preserving transformation is among the strongest uses of assistance, and it depends entirely on the regression tests that protect it.
 
+<!-- nav:start -->
+`AI-AGT-006` &middot; status **proposed** &middot; domain [`agentic-engineering/`](./)
+
+**Derived from** &mdash; [section 55. AI-Assisted Refactoring](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#55-ai-assisted-refactoring)
+<!-- nav:end -->
+
 ---
 
 AI is particularly effective at systematic refactoring, but refactoring MUST preserve behavior unless requirements explicitly change.

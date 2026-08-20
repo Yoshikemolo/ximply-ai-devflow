@@ -11,7 +11,8 @@ It verifies what can actually be verified mechanically:
     status          drawn from the agreed vocabulary
     relationships   every identifier in `related` resolves to a document
     links           every relative Markdown link resolves to a file
-    coverage        every corpus document is reachable from the README
+    anchors         every link fragment resolves to a heading in its target
+    coverage        every document is reachable by following links from README
 
 It deliberately does not check prose. Whether a document is any good is a
 question for human review, and a gate that pretends otherwise mostly teaches
@@ -20,13 +21,19 @@ people to write around it.
 Run from the repository root:
 
     python tools/check_corpus.py
+
+The navigation headers the documents carry are generated rather than authored;
+`tools/render_headers.py --check` verifies they still agree with the front
+matter they were derived from.
 """
 
 from __future__ import annotations
 
 import re
 import sys
+import unicodedata
 from pathlib import Path
+from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -47,10 +54,46 @@ DOMAIN_PREFIX = {
 REQUIRED = ["id", "title", "status"]
 DOMAIN_REQUIRED = REQUIRED + ["domain", "owners", "applies_to", "related", "source"]
 DECISION_REQUIRED = REQUIRED + ["created", "owners", "related"]
+QUESTION_REQUIRED = REQUIRED + ["domain", "opened", "owners", "question", "affects", "related", "source"]
 
 STATUSES = {"proposed", "accepted", "deprecated", "superseded", "rejected", "pending"}
+# A question has its own lifecycle. It is not proposed or accepted; it is asked,
+# and it stays asked until a decision record closes it.
+QUESTION_STATUSES = {"open", "answered", "deferred", "withdrawn", "superseded"}
 ID_RE = re.compile(r"^AI-(PRIN|FND|KNOW|SEC|AGT|VER|INT|CHG|GOV|PROF|DEC)-\d{3}$")
+QUESTION_ID_RE = re.compile(r"^OQ-\d{4}$")
+QUESTIONS_DIR = ROOT / "governance" / "open-questions"
 LINK_RE = re.compile(r"\]\(([^)]+)\)")
+HEADING_RE = re.compile(r"^#{1,6}\s+(.*)$", re.MULTILINE)
+
+
+def slug(heading: str) -> str:
+    """Approximate the anchor GitHub generates for a heading.
+
+    Letters, numbers, marks and connector or dash punctuation survive;
+    everything else is dropped, spaces become hyphens, and the result is
+    lower-cased. Kept here rather than in the renderer because the check is
+    what makes the anchors trustworthy.
+    """
+    kept = []
+    for char in heading:
+        category = unicodedata.category(char)
+        if category[0] in "LN" or category in ("Pc", "Pd", "Mn", "Mc"):
+            kept.append(char)
+        elif char == " ":
+            kept.append("-")
+    return "".join(kept).lower()
+
+
+_anchors: dict[Path, set[str]] = {}
+
+
+def anchors_of(path: Path) -> set[str]:
+    if path not in _anchors:
+        text = path.read_text(encoding="utf-8", errors="replace")
+        _anchors[path] = {slug(h.strip()) for h in HEADING_RE.findall(text)}
+    return _anchors[path]
+
 
 errors: list[str] = []
 
@@ -76,16 +119,21 @@ def parse_front_matter(text: str) -> dict[str, object] | None:
             if item == "[]":
                 data[key] = []
             elif item.startswith("- "):
-                data.setdefault(key, [])
-                if isinstance(data[key], list):
-                    data[key].append(item[2:].strip())
+                # The key line that opened this list parsed to None, so replace
+                # it rather than setdefault, which would leave the None in place
+                # and silently drop every item.
+                if not isinstance(data.get(key), list):
+                    data[key] = []
+                data[key].append(item[2:].strip())
             continue
         if ":" not in raw:
             return None
         key, _, value = raw.partition(":")
         key = key.strip()
         value = value.strip()
-        data[key] = value if value else None
+        # An inline "[]" is an empty list, not the two-character string. Left as
+        # a string it iterates as its own brackets wherever a list is expected.
+        data[key] = [] if value == "[]" else (value if value else None)
     return data
 
 
@@ -104,25 +152,35 @@ def check_document(path: Path, ids: dict[str, Path]) -> dict[str, object] | None
         return None
 
     domain = path.relative_to(ROOT).parts[0]
-    required = DECISION_REQUIRED if domain == "decisions" else DOMAIN_REQUIRED
+    is_question = path.parent == QUESTIONS_DIR
+
+    if is_question:
+        required = QUESTION_REQUIRED
+    elif domain == "decisions":
+        required = DECISION_REQUIRED
+    else:
+        required = DOMAIN_REQUIRED
     for field in required:
         if field not in front:
             fail(path, f"front matter missing '{field}'")
 
     doc_id = front.get("id")
-    if not isinstance(doc_id, str) or not ID_RE.match(doc_id):
+    pattern = QUESTION_ID_RE if is_question else ID_RE
+    if not isinstance(doc_id, str) or not pattern.match(doc_id):
         fail(path, f"malformed identifier: {doc_id!r}")
     else:
         if doc_id in ids:
             fail(path, f"duplicate identifier {doc_id}, also in {ids[doc_id].relative_to(ROOT).as_posix()}")
         ids[doc_id] = path
-        expected = DOMAIN_PREFIX[domain]
-        if doc_id.split("-")[1] != expected:
-            fail(path, f"identifier {doc_id} does not match domain '{domain}' (expected AI-{expected}-NNN)")
+        if not is_question:
+            expected = DOMAIN_PREFIX[domain]
+            if doc_id.split("-")[1] != expected:
+                fail(path, f"identifier {doc_id} does not match domain '{domain}' (expected AI-{expected}-NNN)")
 
     status = front.get("status")
-    if status not in STATUSES:
-        fail(path, f"status {status!r} is not one of {sorted(STATUSES)}")
+    allowed = QUESTION_STATUSES if is_question else STATUSES
+    if status not in allowed:
+        fail(path, f"status {status!r} is not one of {sorted(allowed)}")
 
     if domain != "decisions" and front.get("domain") != domain:
         fail(path, f"front matter domain {front.get('domain')!r} does not match location {domain!r}")
@@ -130,11 +188,44 @@ def check_document(path: Path, ids: dict[str, Path]) -> dict[str, object] | None
     for link in LINK_RE.findall(text):
         if link.startswith(("http://", "https://", "#", "mailto:")):
             continue
-        target = (path.parent / link.split("#")[0]).resolve()
+        location, _, fragment = link.partition("#")
+        target = (path.parent / unquote(location)).resolve()
         if not target.exists():
             fail(path, f"dangling link: {link}")
+        elif fragment and target.suffix == ".md":
+            anchor = unquote(fragment)
+            if anchor not in anchors_of(target):
+                fail(path, f"anchor not found in {target.name}: #{anchor}")
 
     return front
+
+
+def reachable(start: Path) -> set[Path]:
+    """Every document a reader can arrive at by following links from `start`.
+
+    A link to a directory reaches the documents directly inside it, which is
+    how the README indexes a domain; anything deeper has to be linked by a
+    document that was itself reached. Selective retrieval is the argument the
+    corpus rests on, and a document nothing points at cannot be retrieved.
+    """
+    seen = {start.resolve()}
+    queue = [start]
+    while queue:
+        current = queue.pop()
+        try:
+            text = current.read_text(encoding="utf-8")
+        except OSError:
+            continue
+        for link in LINK_RE.findall(text):
+            if link.startswith(("http://", "https://", "#", "mailto:")):
+                continue
+            target = (current.parent / unquote(link.partition("#")[0])).resolve()
+            found = sorted(target.glob("*.md")) if target.is_dir() else [target]
+            for item in found:
+                if item.suffix == ".md" and item.exists() and item not in seen:
+                    seen.add(item)
+                    queue.append(item)
+    return seen
 
 
 def main() -> int:
@@ -152,24 +243,21 @@ def main() -> int:
             fronts[path] = front
 
     for path, front in fronts.items():
-        for ref in front.get("related") or []:
-            if ref not in ids:
-                fail(path, f"related identifier {ref} does not resolve to any document")
+        for field in ("related", "affects", "supersedes"):
+            for ref in front.get(field) or []:
+                if ref not in ids:
+                    fail(path, f"{field} identifier {ref} does not resolve to any document")
 
-    readme = (ROOT / "README.md").read_text(encoding="utf-8")
-    linked = {
-        (ROOT / "README.md").parent.joinpath(link.split("#")[0]).resolve()
-        for link in LINK_RE.findall(readme)
-        if not link.startswith(("http://", "https://", "#", "mailto:"))
-    }
+    readme = ROOT / "README.md"
+    reached = reachable(readme)
     for path in documents:
-        if path.resolve() not in linked and path.parent.resolve() not in linked:
-            fail(path, "not reachable from README.md")
+        if path.resolve() not in reached:
+            fail(path, "not reachable by following links from README.md")
 
-    for link in LINK_RE.findall(readme):
+    for link in LINK_RE.findall(readme.read_text(encoding="utf-8")):
         if link.startswith(("http://", "https://", "#", "mailto:")):
             continue
-        if not (ROOT / link.split("#")[0]).exists():
+        if not (ROOT / unquote(link.split("#")[0])).exists():
             errors.append(f"README.md: dangling link: {link}")
 
     if errors:

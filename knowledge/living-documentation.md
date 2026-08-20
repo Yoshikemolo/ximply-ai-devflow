@@ -17,6 +17,14 @@ source:
 
 The repository is only authoritative if it is kept true. Documentation that contradicts the implementation is a defect, and the second link of the chain depends on treating it as one.
 
+<!-- nav:start -->
+`AI-KNOW-002` &middot; status **proposed** &middot; domain [`knowledge/`](./)
+
+**Related** &mdash; [Context Economy `AI-FND-003`](../ai-foundations/context-economy.md)
+
+**Derived from** &mdash; [section 13. Living Documentation](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#13-living-documentation)
+<!-- nav:end -->
+
 ---
 
 `/docs` is considered part of the product.

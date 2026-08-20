@@ -21,6 +21,14 @@ source:
 
 Who answers for a change, and which decisions are not delegable. This document draws the line between what an AI system may contribute and what only an accountable engineer may decide.
 
+<!-- nav:start -->
+`AI-PRIN-002` &middot; status **proposed** &middot; domain [`principles/`](./)
+
+**Related** &mdash; [Local Models and Organization-Owned Agentic Tooling `AI-AGT-003`](../agentic-engineering/local-and-corporate-agents.md) &middot; [Compliance and Exceptions `AI-GOV-002`](../governance/compliance-and-exceptions.md) &middot; [Open Questions `AI-GOV-006`](../governance/open-questions.md) &middot; [Human Review `AI-INT-004`](../integration/human-review.md)
+
+**Derived from** &mdash; [8.1 Human ownership](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#81-human-ownership) &middot; [8.2 Human-controlled integration](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#82-human-controlled-integration) &middot; [section 9. Operational Boundaries: Where AI Fits and Where It Should Not Decide](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#9-operational-boundaries-where-ai-fits-and-where-it-should-not-decide)
+<!-- nav:end -->
+
 ---
 
 ## Human ownership

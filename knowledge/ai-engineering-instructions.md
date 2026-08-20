@@ -18,6 +18,14 @@ source:
 
 Reusable engineering rules belong in the repository, versioned with the code they govern. The complementary half of the same decision is keeping private local agent configuration out of version control.
 
+<!-- nav:start -->
+`AI-KNOW-004` &middot; status **proposed** &middot; domain [`knowledge/`](./)
+
+**Related** &mdash; [Agentic Security Boundary `AI-SEC-002`](../security/agentic-security-boundary.md)
+
+**Derived from** &mdash; [section 17. Versioned AI Engineering Instructions](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#17-versioned-ai-engineering-instructions) &middot; [section 18. Private AI Configuration](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#18-private-ai-configuration)
+<!-- nav:end -->
+
 ---
 
 ## Versioned AI Engineering Instructions

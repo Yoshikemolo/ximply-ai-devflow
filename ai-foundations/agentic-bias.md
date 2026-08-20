@@ -17,6 +17,14 @@ source:
 
 Designed agreeableness and miscalibrated confidence, and why a session tends to confirm its own output. This is the reason verification has to come from outside the conversation that produced the work.
 
+<!-- nav:start -->
+`AI-FND-002` &middot; status **proposed** &middot; domain [`ai-foundations/`](./)
+
+**Related** &mdash; [Context Economy `AI-FND-003`](context-economy.md)
+
+**Derived from** &mdash; [section 6. Agentic Bias: Designed Agreeableness and False Confidence](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#6-agentic-bias-designed-agreeableness-and-false-confidence)
+<!-- nav:end -->
+
 ---
 
 The previous section describes what models cannot do. This one describes something subtler and, in day-to-day work, more consequential: the way assistants are built makes it hard for the engineer to notice when they are wrong.

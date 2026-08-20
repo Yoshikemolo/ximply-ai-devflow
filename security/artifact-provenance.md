@@ -17,6 +17,12 @@ source:
 
 Being able to say what an artifact is, where it came from, and which source it was built from.
 
+<!-- nav:start -->
+`AI-SEC-007` &middot; status **proposed** &middot; domain [`security/`](./)
+
+**Derived from** &mdash; [section 51. Artifact Provenance and Signing](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#51-artifact-provenance-and-signing)
+<!-- nav:end -->
+
 ---
 
 Higher-assurance systems SHOULD generate verifiable build provenance and SHOULD consider signing release artifacts.

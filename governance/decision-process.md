@@ -23,6 +23,14 @@ engineering practice; the mechanism by which the framework itself changes
 deserves the same treatment, and it was the one thing the draft did not write
 down.
 
+<!-- nav:start -->
+`AI-GOV-007` &middot; status **proposed** &middot; domain [`governance/`](./)
+
+**Related** &mdash; [Engineering Governance Model `AI-GOV-001`](governance-model.md) &middot; [Open Questions `AI-GOV-006`](open-questions.md) &middot; [Architecture Decisions and Guardrails `AI-KNOW-003`](../knowledge/architecture-decisions.md) &middot; [Addressable Knowledge `AI-KNOW-005`](../knowledge/addressable-knowledge.md)
+
+**Derived from** &mdash; authored for this repository
+<!-- nav:end -->
+
 ---
 
 ## Two kinds of document

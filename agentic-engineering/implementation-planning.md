@@ -17,6 +17,12 @@ source:
 
 The plan that makes feature-scale assisted work reviewable: decomposition, checkpoints, and an agreed target before generation begins.
 
+<!-- nav:start -->
+`AI-AGT-004` &middot; status **proposed** &middot; domain [`agentic-engineering/`](./)
+
+**Derived from** &mdash; [section 25. Implementation Planning](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#25-implementation-planning)
+<!-- nav:end -->
+
 ---
 
 Before implementation, a task SHOULD identify:

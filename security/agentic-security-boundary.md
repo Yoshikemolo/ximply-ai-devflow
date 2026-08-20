@@ -19,6 +19,14 @@ source:
 
 Context aggregation risk, progressive disclosure, and the protection of intellectual property that no individual file would identify as confidential. Sensitivity is a property of the accumulated context, not of the item.
 
+<!-- nav:start -->
+`AI-SEC-002` &middot; status **proposed** &middot; domain [`security/`](./)
+
+**Related** &mdash; [Local Models and Organization-Owned Agentic Tooling `AI-AGT-003`](../agentic-engineering/local-and-corporate-agents.md) &middot; [Human Accountability `AI-PRIN-002`](../principles/human-accountability.md) &middot; [AI Context Boundary `AI-SEC-001`](ai-context-boundary.md)
+
+**Derived from** &mdash; [section 21. Agentic Security Boundary](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#21-agentic-security-boundary)
+<!-- nav:end -->
+
 ---
 
 Agentic AI introduces additional risk because generated instructions may cause actions, not merely text generation.

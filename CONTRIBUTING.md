@@ -30,10 +30,14 @@ explained.
 4. **Front matter stays true.** If a document's `related`, `applies_to` or
    `source` no longer describes it, that is a defect in the same sense the
    framework means it.
-5. **No secrets, ever** — in a document, a commit message, an example or a
+5. **Do not hand-edit the navigation header.** The block between `nav:start`
+   and `nav:end` is generated from the front matter by
+   `python tools/render_headers.py`. Change the front matter and re-run it; the
+   gate fails if the two disagree.
+6. **No secrets, ever** — in a document, a commit message, an example or a
    fixture. Not credentials, tokens, keys, internal URLs, customer data or
    personal information.
-6. **English.** The corpus is written in English so it reads consistently and
+7. **English.** The corpus is written in English so it reads consistently and
    can be cited without translation drift.
 
 ## Commits

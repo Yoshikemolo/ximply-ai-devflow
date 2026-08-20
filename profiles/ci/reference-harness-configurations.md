@@ -17,6 +17,12 @@ source:
 
 Non-normative worked examples per stack. Expected to age faster than anything in the domain documents, and versioned separately from them.
 
+<!-- nav:start -->
+`AI-PROF-001` &middot; status **proposed** &middot; domain [`profiles/`](../)
+
+**Derived from** &mdash; [Annex A — Reference CI Harness Configurations](../../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#annex-a-%E2%80%94-reference-ci-harness-configurations)
+<!-- nav:end -->
+
 ---
 
 Non-normative. The workflows below are worked examples of what the quality gate could look like for each stack, offered so that the discussion in Part I has something concrete attached to it. They are starting points to adapt, not configurations to copy unchanged, and they are expected to age faster than anything in Part I.

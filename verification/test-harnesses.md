@@ -18,6 +18,12 @@ source:
 
 The executable environment in which evidence is produced, and why the harness must not be authored by the same process it is meant to judge.
 
+<!-- nav:start -->
+`AI-VER-005` &middot; status **proposed** &middot; domain [`verification/`](./)
+
+**Derived from** &mdash; [section 43. Test Harnesses](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#43-test-harnesses) &middot; [section 44. Harness Independence](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#44-harness-independence)
+<!-- nav:end -->
+
 ---
 
 ## Test Harnesses

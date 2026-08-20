@@ -17,6 +17,14 @@ source:
 
 What an agent is allowed to know. Minimum required context is both an accuracy control and the principal preventive control against cumulative exposure. Keep it separate from what an agent is allowed to do, which is a different boundary.
 
+<!-- nav:start -->
+`AI-SEC-001` &middot; status **proposed** &middot; domain [`security/`](./)
+
+**Related** &mdash; [Agentic Security Boundary `AI-SEC-002`](agentic-security-boundary.md)
+
+**Derived from** &mdash; [section 19. AI Context Boundary](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#19-ai-context-boundary)
+<!-- nav:end -->
+
 ---
 
 Context provided to an AI system MUST follow the principle:

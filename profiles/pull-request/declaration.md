@@ -17,6 +17,14 @@ source:
 
 A template sketch for the author declaration, offered as material for the traceability discussion rather than as an adopted form.
 
+<!-- nav:start -->
+`AI-PROF-003` &middot; status **proposed** &middot; domain [`profiles/`](../)
+
+**Related** &mdash; [Open Questions `AI-GOV-006`](../../governance/open-questions.md)
+
+**Derived from** &mdash; [Annex C — Draft Pull Request Declaration](../../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#annex-c-%E2%80%94-draft-pull-request-declaration)
+<!-- nav:end -->
+
 ---
 
 Non-normative. This annex sketches how the traceability discussed in Part I could look in practice, so that the discussion has something concrete to react to. The categories below are a starting point for the conversation described in [the open questions](../../governance/open-questions.md), not an agreed list.

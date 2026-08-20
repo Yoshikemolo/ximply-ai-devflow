@@ -17,6 +17,12 @@ source:
 
 Where engineering attention moves when implementation gets cheaper. The role expands rather than shrinks: design and definition before, integration and validation after.
 
+<!-- nav:start -->
+`AI-AGT-001` &middot; status **proposed** &middot; domain [`agentic-engineering/`](./)
+
+**Derived from** &mdash; [section 10. Human-in-the-Loop Framework: The Engineer's Role](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#10-human-in-the-loop-framework-the-engineers-role)
+<!-- nav:end -->
+
 ---
 
 In an AI-assisted environment the engineer's centre of gravity moves from producing lines of code to **designing, integrating and validating** them. The role expands; it does not shrink.

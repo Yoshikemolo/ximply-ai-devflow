@@ -17,6 +17,14 @@ source:
 
 What is worth recording about how a change came to be. The purpose is auditability rather than attribution, and the categories below are an open proposal rather than a decision.
 
+<!-- nav:start -->
+`AI-GOV-003` &middot; status **proposed** &middot; domain [`governance/`](./)
+
+**Related** &mdash; [Draft Pull Request Declaration `AI-PROF-003`](../profiles/pull-request/declaration.md)
+
+**Derived from** &mdash; [section 56. AI Contribution Traceability: Options](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#56-ai-contribution-traceability-options)
+<!-- nav:end -->
+
 ---
 
 Some traceability of AI-assisted development is useful for auditability and for understanding how a change came to be. The open question is what to record.
