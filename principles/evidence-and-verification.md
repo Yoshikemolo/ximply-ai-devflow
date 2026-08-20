@@ -17,6 +17,14 @@ source:
 
 AI output is a proposal until something independent says otherwise. This document states the principle; the verification domain develops what independence means in practice.
 
+<!-- nav:start -->
+`AI-PRIN-003` &middot; status **proposed** &middot; domain [`principles/`](./)
+
+**Related** &mdash; [Agentic Bias `AI-FND-002`](../ai-foundations/agentic-bias.md)
+
+**Derived from** &mdash; [8.4 Verification over generation](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#84-verification-over-generation)
+<!-- nav:end -->
+
 ---
 
 AI output is a proposal until independently verified.

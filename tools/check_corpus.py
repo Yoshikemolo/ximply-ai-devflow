@@ -11,6 +11,7 @@ It verifies what can actually be verified mechanically:
     status          drawn from the agreed vocabulary
     relationships   every identifier in `related` resolves to a document
     links           every relative Markdown link resolves to a file
+    anchors         every link fragment resolves to a heading in its target
     coverage        every corpus document is reachable from the README
 
 It deliberately does not check prose. Whether a document is any good is a
@@ -20,13 +21,19 @@ people to write around it.
 Run from the repository root:
 
     python tools/check_corpus.py
+
+The navigation headers the documents carry are generated rather than authored;
+`tools/render_headers.py --check` verifies they still agree with the front
+matter they were derived from.
 """
 
 from __future__ import annotations
 
 import re
 import sys
+import unicodedata
 from pathlib import Path
+from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -51,6 +58,36 @@ DECISION_REQUIRED = REQUIRED + ["created", "owners", "related"]
 STATUSES = {"proposed", "accepted", "deprecated", "superseded", "rejected", "pending"}
 ID_RE = re.compile(r"^AI-(PRIN|FND|KNOW|SEC|AGT|VER|INT|CHG|GOV|PROF|DEC)-\d{3}$")
 LINK_RE = re.compile(r"\]\(([^)]+)\)")
+HEADING_RE = re.compile(r"^#{1,6}\s+(.*)$", re.MULTILINE)
+
+
+def slug(heading: str) -> str:
+    """Approximate the anchor GitHub generates for a heading.
+
+    Letters, numbers, marks and connector or dash punctuation survive;
+    everything else is dropped, spaces become hyphens, and the result is
+    lower-cased. Kept here rather than in the renderer because the check is
+    what makes the anchors trustworthy.
+    """
+    kept = []
+    for char in heading:
+        category = unicodedata.category(char)
+        if category[0] in "LN" or category in ("Pc", "Pd", "Mn", "Mc"):
+            kept.append(char)
+        elif char == " ":
+            kept.append("-")
+    return "".join(kept).lower()
+
+
+_anchors: dict[Path, set[str]] = {}
+
+
+def anchors_of(path: Path) -> set[str]:
+    if path not in _anchors:
+        text = path.read_text(encoding="utf-8", errors="replace")
+        _anchors[path] = {slug(h.strip()) for h in HEADING_RE.findall(text)}
+    return _anchors[path]
+
 
 errors: list[str] = []
 
@@ -76,16 +113,21 @@ def parse_front_matter(text: str) -> dict[str, object] | None:
             if item == "[]":
                 data[key] = []
             elif item.startswith("- "):
-                data.setdefault(key, [])
-                if isinstance(data[key], list):
-                    data[key].append(item[2:].strip())
+                # The key line that opened this list parsed to None, so replace
+                # it rather than setdefault, which would leave the None in place
+                # and silently drop every item.
+                if not isinstance(data.get(key), list):
+                    data[key] = []
+                data[key].append(item[2:].strip())
             continue
         if ":" not in raw:
             return None
         key, _, value = raw.partition(":")
         key = key.strip()
         value = value.strip()
-        data[key] = value if value else None
+        # An inline "[]" is an empty list, not the two-character string. Left as
+        # a string it iterates as its own brackets wherever a list is expected.
+        data[key] = [] if value == "[]" else (value if value else None)
     return data
 
 
@@ -130,9 +172,14 @@ def check_document(path: Path, ids: dict[str, Path]) -> dict[str, object] | None
     for link in LINK_RE.findall(text):
         if link.startswith(("http://", "https://", "#", "mailto:")):
             continue
-        target = (path.parent / link.split("#")[0]).resolve()
+        location, _, fragment = link.partition("#")
+        target = (path.parent / unquote(location)).resolve()
         if not target.exists():
             fail(path, f"dangling link: {link}")
+        elif fragment and target.suffix == ".md":
+            anchor = unquote(fragment)
+            if anchor not in anchors_of(target):
+                fail(path, f"anchor not found in {target.name}: #{anchor}")
 
     return front
 
@@ -169,7 +216,7 @@ def main() -> int:
     for link in LINK_RE.findall(readme):
         if link.startswith(("http://", "https://", "#", "mailto:")):
             continue
-        if not (ROOT / link.split("#")[0]).exists():
+        if not (ROOT / unquote(link.split("#")[0])).exists():
             errors.append(f"README.md: dangling link: {link}")
 
     if errors:

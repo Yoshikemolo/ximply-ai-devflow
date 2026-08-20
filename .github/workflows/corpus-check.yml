@@ -27,5 +27,8 @@ jobs:
       - name: Check corpus integrity
         run: python tools/check_corpus.py
 
+      - name: Check the navigation headers are current
+        run: python tools/render_headers.py --check
+
       - name: Check the derivation still covers the draft
         run: python tools/split_framework.py --check

@@ -17,6 +17,12 @@ source:
 
 How the framework is enforced, and how an exception is granted so that it stays explicit, owned and time-bounded rather than becoming silent erosion.
 
+<!-- nav:start -->
+`AI-GOV-002` &middot; status **proposed** &middot; domain [`governance/`](./)
+
+**Derived from** &mdash; [section 68. Proposed Compliance and Enforcement Model](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#68-proposed-compliance-and-enforcement-model)
+<!-- nav:end -->
+
 ---
 
 If the team decides to adopt this, it needs a model for what happens when something does not comply. This section proposes one; the level of strictness is itself a decision, and a staged approach — visibility first, blocking checks later — is a reasonable alternative to everything at once.

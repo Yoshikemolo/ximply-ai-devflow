@@ -12,6 +12,11 @@ related:
   - AI-DEC-001
 ---
 
+<!-- nav:start -->
+`AI-DEC-003` &middot; status **accepted** &middot; domain [`decisions/`](./)
+
+**Related** &mdash; [Repository as Engineering Source of Truth `AI-KNOW-001`](../knowledge/repository-source-of-truth.md) &middot; [Living Documentation `AI-KNOW-002`](../knowledge/living-documentation.md) &middot; [Spread the draft into an addressable domain corpus `AI-DEC-001`](AI-DEC-001-spread-the-draft-into-a-domain-corpus.md)
+<!-- nav:end -->
 # Context
 
 AI-DEC-001 produced fifty domain documents derived from the draft. That leaves

@@ -17,6 +17,12 @@ source:
 
 What these systems can and cannot be relied on to do, and the failure modes that the controls elsewhere in the corpus exist to catch. Agreeing on this precedes arguing about thresholds.
 
+<!-- nav:start -->
+`AI-FND-001` &middot; status **proposed** &middot; domain [`ai-foundations/`](./)
+
+**Derived from** &mdash; [section 5. AI Capability Model: Realistic Expectations and Known Failure Modes](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#5-ai-capability-model-realistic-expectations-and-known-failure-modes)
+<!-- nav:end -->
+
 ---
 
 Effective governance requires a shared, non-mythologized understanding of what current AI coding assistants actually do. The controls proposed later in this document exist because of the failure modes described below, not because of a general distrust of automation.

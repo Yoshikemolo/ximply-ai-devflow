@@ -19,6 +19,14 @@ source:
 
 What the framework deliberately leaves undecided. This is the agenda for review, not a list of gaps to be quietly filled in. Each question that closes should close as a decision record.
 
+<!-- nav:start -->
+`AI-GOV-006` &middot; status **proposed** &middot; domain [`governance/`](./)
+
+**Related** &mdash; [Context Economy `AI-FND-003`](../ai-foundations/context-economy.md) &middot; [AI Autonomy Levels `AI-FND-004`](../ai-foundations/autonomy-levels.md) &middot; [Proposed Quality Gate Baselines `AI-PROF-002`](../profiles/quality-gates/baselines.md)
+
+**Derived from** &mdash; [section 71. Open Questions and Decisions Required](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#71-open-questions-and-decisions-required)
+<!-- nav:end -->
+
 ---
 
 This section collects the points that this draft deliberately leaves open. They are the agenda for engineering review rather than positions already taken. Each one is written as a question, with the options currently visible and the provisional position taken in the text so that the draft remains readable.

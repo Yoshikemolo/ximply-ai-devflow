@@ -17,6 +17,14 @@ source:
 
 How a task is framed before an agent starts: the context injected, the constraints stated, and the checkpoints defined. This is where minimum necessary context stops being a policy and becomes a practice.
 
+<!-- nav:start -->
+`AI-AGT-002` &middot; status **proposed** &middot; domain [`agentic-engineering/`](./)
+
+**Related** &mdash; [Agentic Security Boundary `AI-SEC-002`](../security/agentic-security-boundary.md)
+
+**Derived from** &mdash; [section 20. Context-Informed Prompting Protocol](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#20-context-informed-prompting-protocol)
+<!-- nav:end -->
+
 ---
 
 Prompting is an engineering activity that benefits from method. Open-ended prompts tend to produce generic code that ignores the architecture of the system; constrained prompts tend to produce work that fits it and can be reviewed.

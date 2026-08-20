@@ -17,6 +17,14 @@ source:
 
 A change is accepted at the speed it can be understood. Reviewability, not model capability, is the constraint that sets batch size.
 
+<!-- nav:start -->
+`AI-AGT-005` &middot; status **proposed** &middot; domain [`agentic-engineering/`](./)
+
+**Related** &mdash; [Context-Informed Prompting Protocol `AI-AGT-002`](context-informed-prompting.md)
+
+**Derived from** &mdash; [section 26. Small-Batch AI Development](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#26-small-batch-ai-development)
+<!-- nav:end -->
+
 ---
 
 AI-assisted modifications work better small — not because a capable agent cannot handle more, but because a change is accepted at the speed it can be understood.

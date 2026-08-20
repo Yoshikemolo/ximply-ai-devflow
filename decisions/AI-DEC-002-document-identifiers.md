@@ -11,6 +11,11 @@ related:
   - AI-GOV-006
 ---
 
+<!-- nav:start -->
+`AI-DEC-002` &middot; status **proposed** &middot; domain [`decisions/`](./)
+
+**Related** &mdash; [Addressable Knowledge `AI-KNOW-005`](../knowledge/addressable-knowledge.md) &middot; [Open Questions `AI-GOV-006`](../governance/open-questions.md)
+<!-- nav:end -->
 # Context
 
 The draft proposes that documentation pieces carry stable identifiers and

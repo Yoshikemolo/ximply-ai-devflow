@@ -12,6 +12,11 @@ related:
   - AI-FND-003
 ---
 
+<!-- nav:start -->
+`AI-DEC-001` &middot; status **accepted** &middot; domain [`decisions/`](./)
+
+**Related** &mdash; [Repository as Engineering Source of Truth `AI-KNOW-001`](../knowledge/repository-source-of-truth.md) &middot; [Addressable Knowledge `AI-KNOW-005`](../knowledge/addressable-knowledge.md) &middot; [Context Economy `AI-FND-003`](../ai-foundations/context-economy.md)
+<!-- nav:end -->
 # Context
 
 The framework existed as one document of roughly three thousand lines, in

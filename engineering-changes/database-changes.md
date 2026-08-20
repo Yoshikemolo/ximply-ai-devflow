@@ -17,6 +17,12 @@ source:
 
 Playbook for schema and data migration, where assisted work carries irreversible risk.
 
+<!-- nav:start -->
+`AI-CHG-002` &middot; status **proposed** &middot; domain [`engineering-changes/`](./)
+
+**Derived from** &mdash; [section 54. Database Changes](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#54-database-changes)
+<!-- nav:end -->
+
 ---
 
 Database changes MUST include:

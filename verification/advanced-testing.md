@@ -18,6 +18,12 @@ source:
 
 Techniques that check the test suite rather than the implementation, and that become more valuable as the volume of generated code grows.
 
+<!-- nav:start -->
+`AI-VER-004` &middot; status **proposed** &middot; domain [`verification/`](./)
+
+**Derived from** &mdash; [section 41. Property-Based and Invariant Testing](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#41-property-based-and-invariant-testing) &middot; [section 42. Mutation Testing](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#42-mutation-testing)
+<!-- nav:end -->
+
 ---
 
 ## Property-Based and Invariant Testing

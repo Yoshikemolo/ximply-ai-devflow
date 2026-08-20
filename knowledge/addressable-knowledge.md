@@ -18,6 +18,14 @@ source:
 
 Versioning tells you which text you have; an identifier tells you which decision you are talking about. This is what turns a documentation tree into a queryable corpus, and it is the precondition for selective retrieval by an agent. This repository is the first place the idea is being tried.
 
+<!-- nav:start -->
+`AI-KNOW-005` &middot; status **proposed** &middot; domain [`knowledge/`](./)
+
+**Related** &mdash; [Open Questions `AI-GOV-006`](../governance/open-questions.md)
+
+**Derived from** &mdash; [Addressability, briefly](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#addressability-briefly)
+<!-- nav:end -->
+
 ---
 
 The chain works better if every piece of documentation can be named. Versioning alone is not enough: a version tells you which text you have, an identifier tells you *which decision you are talking about*.

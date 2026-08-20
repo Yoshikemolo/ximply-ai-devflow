@@ -18,6 +18,14 @@ source:
 
 The checks that run without asking anyone, and the branch protection that makes them a boundary rather than a suggestion. Concrete thresholds live in the implementation profiles so that changing a number does not reopen the framework.
 
+<!-- nav:start -->
+`AI-INT-005` &middot; status **proposed** &middot; domain [`integration/`](./)
+
+**Related** &mdash; [Proposed Quality Gate Baselines `AI-PROF-002`](../profiles/quality-gates/baselines.md)
+
+**Derived from** &mdash; [section 46. Automated Quality Gates: Proposed Model](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#46-automated-quality-gates-proposed-model) &middot; [section 64. CI Quality Pipeline](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#64-ci-quality-pipeline)
+<!-- nav:end -->
+
 ---
 
 ## Automated Quality Gates: Proposed Model

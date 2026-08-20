@@ -17,6 +17,14 @@ source:
 
 The AI-specific rule: what checks the work must not be what produced it. This is the operational consequence of agentic bias.
 
+<!-- nav:start -->
+`AI-VER-001` &middot; status **proposed** &middot; domain [`verification/`](./)
+
+**Related** &mdash; [Agentic Bias `AI-FND-002`](../ai-foundations/agentic-bias.md)
+
+**Derived from** &mdash; [section 27. Verification Independence](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#27-verification-independence)
+<!-- nav:end -->
+
 ---
 
 An important AI-specific rule is:
