@@ -1,0 +1,26 @@
+# Operating system and editor artifacts
+Thumbs.db
+Desktop.ini
+.DS_Store
+*~
+
+# Microsoft Office lock and temporary files
+~$*
+*.tmp
+
+# Private AI configuration and local agent state.
+# See the framework section "Private AI Configuration": these locations may
+# accumulate credentials, internal URLs, local paths and private prompts.
+# Reviewed, reusable engineering instructions belong under /docs/ai instead.
+.claude/*
+!.claude/skills/
+.cursor/
+.settings/
+.local-ai/
+.ai-private/
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.local.json

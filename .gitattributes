@@ -1,0 +1,11 @@
+# Normalize text files to LF in the repository, checkout native on Windows.
+* text=auto
+
+*.md text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Binary document formats: never diff or normalize.
+*.docx binary
+*.pdf binary
