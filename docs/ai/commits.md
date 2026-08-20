@@ -57,7 +57,7 @@ only implements it; when the two disagree, this document wins.
 ## Trailers
 
 ```text
-Refs: <issue or ticket identifier>
+Refs: <decision record, issue or ticket identifier>
 ADR: <ADR identifier the change implements or is constrained by>
 BREAKING CHANGE: <contract broken and the migration required>
 ```
@@ -65,6 +65,12 @@ BREAKING CHANGE: <contract broken and the migration required>
 A commit that breaks a public contract MUST carry `BREAKING CHANGE:`. A commit
 that implements or contradicts an accepted architectural decision SHOULD carry
 `ADR:`.
+
+In this repository, a commit that applies a decision record SHOULD cite it as
+`Refs: AI-DEC-003`. That is the link the history needs: a domain document
+explains what the framework asks for, and the trailer says which argument put
+it there. `ADR:` is reserved for architectural decisions inside a product
+repository, which this one does not have.
 
 ## Rules
 
