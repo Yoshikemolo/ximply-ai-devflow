@@ -79,6 +79,9 @@ chain in full.
 | Why the tests cannot be trusted to the generator | [Verification Independence](verification/verification-independence.md) |
 | What is still undecided | [Open Questions](governance/open-questions.md) |
 | How something gets decided | [Decision Process](governance/decision-process.md) |
+| What a CI harness could look like | [Reference CI Harness Configurations](profiles/ci/reference-harness-configurations.md) |
+| Which numbers are being proposed | [Quality Gate Baselines](profiles/quality-gates/baselines.md) |
+| What a Pull Request would declare | [Draft PR Declaration](profiles/pull-request/declaration.md) |
 
 ## Reading a document
 

@@ -1,0 +1,31 @@
+name: Corpus check
+
+# The framework argues that documentation contradicting reality is a defect.
+# This is the gate that makes the claim checkable for the corpus itself.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  corpus:
+    name: Corpus integrity
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Check corpus integrity
+        run: python tools/check_corpus.py
+
+      - name: Check the derivation still covers the draft
+        run: python tools/split_framework.py --check
