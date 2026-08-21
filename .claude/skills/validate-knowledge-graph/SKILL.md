@@ -16,6 +16,7 @@ broken in ways the gate would have named in a second.
 ```bash
 python tools/check_corpus.py
 python tools/render_headers.py --check
+python tools/render_summary.py --check
 python tools/split_framework.py --check
 ```
 
@@ -30,6 +31,8 @@ every relative link resolving to a real file
 every link fragment resolving to a real heading in its target
 every document reachable by following links from README.md
 navigation headers agreeing with the front matter they came from
+the summary map agreeing with the documents it was derived from
+links and anchors in README, CONTRIBUTING and the summary map
 every section of the trunk document still having a home
 ```
 
@@ -68,6 +71,14 @@ Look for:
   a contradiction; it is where the next one will come from.
 - **Unanchored claim.** A document asserting something the corpus never
   established, and no `source` or `related` supporting it.
+- **A derived view asserting something.** `summary/README.md` and `compiled/`
+  must state nothing of their own. If the map carries a requirement, a caveat or
+  an explanation that no linked document states, that is a defect in
+  `tools/render_summary.py` and it is the most serious finding in this list: a
+  second source of truth is exactly what the map exists to prevent.
+
+The map is regenerated, so never fix it by editing it. Fix the document it was
+derived from, or the generator, and regenerate.
 
 Report a conflict like this:
 
@@ -105,6 +116,8 @@ Corpus validation
 
 Mechanical:  passed - 66 documents, 66 identifiers
              (or: 3 failures, listed with the command that found them)
+
+Derived views:  the map states nothing the corpus does not
 
 Structural findings:  2
   - AI-GOV-004 lists an owner that no longer exists.

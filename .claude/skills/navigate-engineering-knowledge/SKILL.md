@@ -19,6 +19,7 @@ Never start with a broad search. Start with an index:
 
 | You need | Start at |
 |---|---|
+| Orientation - what the framework is, in two pages | `summary/README.md` |
 | Anything, first time | `README.md` - domain table and question-to-document index |
 | A rule about working in this repository | `CONTRIBUTING.md`, `docs/ai/` |
 | What is undecided | `governance/open-questions.md` |
@@ -70,8 +71,11 @@ not report them as if the corpus declared them - that scheme is still open in
    A large context window is not permission to load more.
 2. **Stop when the evidence is sufficient**, not when the corpus is exhausted.
 3. **Prefer the authoritative document over a summary of it.** Never answer a
-   question about what the framework requires from `compiled/`, from a commit
-   message, or from memory of an earlier session.
+   question about what the framework requires from `summary/`, from `compiled/`,
+   from a commit message, or from memory of an earlier session.
+   `summary/README.md` is a derived navigation layer: use it to find the
+   document, then read the document. It is a route, never evidence, and it
+   never appears in a citation.
 4. **Check `status` before quoting.** Everything in this corpus is currently
    `proposed` and nothing is in force. Say so when it matters: "the framework
    proposes X" is accurate, "the framework requires X" is not.
@@ -99,7 +103,9 @@ List only documents you read. An identifier you did not open is not evidence.
 
 - Load the whole corpus, or `compiled/`, to answer a scoped question.
 - Read a domain directory exhaustively when the index names the document.
-- Quote `compiled/` as authoritative. It is a frozen snapshot that will drift;
-  the domain documents are the source. See `AI-DEC-003`.
+- Quote `compiled/` or `summary/` as authoritative. The first is a frozen
+  snapshot that will drift; the second is regenerated from the documents it
+  links to. Neither states anything of its own. See `AI-DEC-003`.
+- Cite the map instead of the document it pointed you at.
 - Present a provisional position, a discussion point, or your own inference as
   what the framework says.

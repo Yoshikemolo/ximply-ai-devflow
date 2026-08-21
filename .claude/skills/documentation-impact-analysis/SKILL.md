@@ -76,6 +76,17 @@ git diff --name-only main...HEAD | grep -E "\.md$"
 A change that alters documented behaviour and updates no document is
 incomplete - see `knowledge/living-documentation.md`. Say so.
 
+### 6. Check the derived views followed
+
+```bash
+python tools/render_summary.py --check
+python tools/render_headers.py --check
+```
+
+If either reports staleness, the change moved something the views are derived
+from and did not regenerate them. That is a finding like any other, and it is
+fixed by regenerating - never by editing `summary/` or a navigation block.
+
 ## Output
 
 ```text
@@ -122,4 +133,6 @@ If there is no impact, say that in one line. A clean result is a useful result.
   authoritative document almost always needs updating instead - that judgement
   belongs to `maintain-engineering-documentation`.
 - Report a document as affected because a word matched.
+- List `summary/README.md` or `compiled/` as affected documentation. They are
+  derived views: they follow the corpus, they never lead it.
 - Approve, block or merge anything. This produces a finding, not a verdict.

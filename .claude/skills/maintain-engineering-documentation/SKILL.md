@@ -62,12 +62,21 @@ remove the link, remove the identifier.
 
 ### 4. Never hand-edit generated content
 
-The block between `<!-- nav:start -->` and `<!-- nav:end -->` is derived from
-front matter. Change the front matter, then regenerate:
+Two things in this repository are generated, and editing either is how the
+corpus acquires a second source of truth:
 
 ```bash
-python tools/render_headers.py
+python tools/render_headers.py   # the block between nav:start and nav:end
+python tools/render_summary.py   # summary/README.md, the framework map
 ```
+
+The map is derived from framing paragraphs, front matter, the README domain
+table and the corpus counts. If a change altered any of those - and changing a
+framing paragraph or a title always does - regenerate it in the same commit.
+
+Never write a sentence into the map. It has no prose of its own by design: if
+something needs saying there, it needs saying in the document the map quotes.
+A requirement that exists only in the map is a requirement nobody agreed to.
 
 `compiled/` is a frozen snapshot, not a source. Never edit it. See `AI-DEC-003`.
 
@@ -76,10 +85,11 @@ python tools/render_headers.py
 ```bash
 python tools/check_corpus.py
 python tools/render_headers.py --check
+python tools/render_summary.py --check
 python tools/split_framework.py --check
 ```
 
-All three must pass. If one fails, fix the cause - never work around the gate.
+All four must pass. If one fails, fix the cause - never work around the gate.
 
 ### 6. Report what moved
 
@@ -95,7 +105,11 @@ Adding one:
 3. Link it from an index, or from a document reachable from `README.md` - the
    gate fails on a document nothing points at, and rightly: a document that
    cannot be found cannot be retrieved.
-4. Regenerate headers, run the gate.
+4. Decide whether it belongs in the map. Most documents do not: the map carries
+   two or three entry points per domain, and adding a fourth to every block
+   turns two pages into a directory listing. If it does belong, change `BLOCKS`
+   in `tools/render_summary.py` - that list is the only authored part of the map.
+5. Regenerate headers and the map, then run the gate.
 
 Moving one between domains changes its identifier prefix, which breaks every
 citation of it. That is a substantive change: open a decision record first,
@@ -123,7 +137,10 @@ per `CONTRIBUTING.md`.
 
 - Create a document to avoid the harder work of editing one.
 - Copy a paragraph between documents. Link instead.
-- Edit the navigation block, `compiled/`, or anything else that is generated.
+- Edit the navigation block, `summary/`, `compiled/`, or anything else that is
+  generated.
+- Add a requirement, a caveat or an explanation to the map. Put it in the
+  document and let the map derive it.
 - Use `--force` on the split tools. After the source inversion they destroy
   edits rather than build anything.
 - Mark a question answered without an accepted decision record behind it.
