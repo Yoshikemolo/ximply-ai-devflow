@@ -9,6 +9,16 @@ Requirement levels — MUST, SHOULD, MAY — express *the strength being propose
 for that item*, not an obligation. See
 [Purpose, Scope and Normative Language](principles/purpose-and-scope.md).
 
+## Start here
+
+**[The Framework Map](summary/README.md)** — two pages: what the framework is
+for, the chain it hangs on, the seven principles, and eight blocks that link
+straight into the authoritative documents. Read it to understand the model,
+follow the links to apply it, read the decision records to understand why.
+
+It is a derived navigation layer. It states nothing of its own and is
+regenerated from the documents below, which remain authoritative.
+
 ## What this repository is
 
 The framework itself, as an addressable corpus: fifty-one documents grouped by

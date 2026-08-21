@@ -30,5 +30,8 @@ jobs:
       - name: Check the navigation headers are current
         run: python tools/render_headers.py --check
 
+      - name: Check the summary map is current
+        run: python tools/render_summary.py --check
+
       - name: Check the derivation still covers the draft
         run: python tools/split_framework.py --check

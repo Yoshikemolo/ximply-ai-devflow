@@ -13,6 +13,7 @@ It verifies what can actually be verified mechanically:
     links           every relative Markdown link resolves to a file
     anchors         every link fragment resolves to a heading in its target
     coverage        every document is reachable by following links from README
+    views           README, CONTRIBUTING and the summary map link only to real targets
 
 It deliberately does not check prose. Whether a document is any good is a
 question for human review, and a gate that pretends otherwise mostly teaches
@@ -254,11 +255,23 @@ def main() -> int:
         if path.resolve() not in reached:
             fail(path, "not reachable by following links from README.md")
 
-    for link in LINK_RE.findall(readme.read_text(encoding="utf-8")):
-        if link.startswith(("http://", "https://", "#", "mailto:")):
+    # The view files are not corpus documents - they carry no identifier and
+    # state nothing of their own - but a reader arrives through them, so their
+    # links are checked like any other.
+    for view in (readme, ROOT / "CONTRIBUTING.md", ROOT / "summary" / "README.md"):
+        if not view.exists():
             continue
-        if not (ROOT / unquote(link.split("#")[0])).exists():
-            errors.append(f"README.md: dangling link: {link}")
+        name = view.relative_to(ROOT).as_posix()
+        for link in LINK_RE.findall(view.read_text(encoding="utf-8")):
+            if link.startswith(("http://", "https://", "#", "mailto:")):
+                continue
+            location, _, fragment = link.partition("#")
+            target = (view.parent / unquote(location)).resolve()
+            if not target.exists():
+                errors.append(f"{name}: dangling link: {link}")
+            elif fragment and target.suffix == ".md":
+                if unquote(fragment) not in anchors_of(target):
+                    errors.append(f"{name}: anchor not found in {target.name}: #{unquote(fragment)}")
 
     if errors:
         print(f"corpus check failed with {len(errors)} problem(s):\n")
