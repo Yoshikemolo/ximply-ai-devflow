@@ -811,7 +811,7 @@ Examples:
 /docs/security/authorization-model.md
 /docs/security/threat-model.md
 
-/docs/integration/mission-control.md
+/docs/integration/external-systems.md
 ```
 
 ---
