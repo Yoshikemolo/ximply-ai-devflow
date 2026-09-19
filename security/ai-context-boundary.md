@@ -1,7 +1,7 @@
 ---
 id: AI-SEC-001
 title: AI Context Boundary
-status: proposed
+status: accepted
 domain: security
 owners:
   - engineering
@@ -18,7 +18,7 @@ source:
 What an agent is allowed to know. Minimum required context is both an accuracy control and the principal preventive control against cumulative exposure. Keep it separate from what an agent is allowed to do, which is a different boundary.
 
 <!-- nav:start -->
-`AI-SEC-001` &middot; status **proposed** &middot; domain [`security/`](./)
+`AI-SEC-001` &middot; status **accepted** &middot; domain [`security/`](./)
 
 **Related** &mdash; [Agentic Security Boundary `AI-SEC-002`](agentic-security-boundary.md)
 

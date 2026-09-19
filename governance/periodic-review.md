@@ -1,7 +1,7 @@
 ---
 id: AI-GOV-005
 title: Periodic AI Governance Review
-status: proposed
+status: accepted
 domain: governance
 owners:
   - engineering
@@ -18,7 +18,7 @@ source:
 The rhythm at which the framework is revisited, because the capability it governs moves faster than the framework does.
 
 <!-- nav:start -->
-`AI-GOV-005` &middot; status **proposed** &middot; domain [`governance/`](./)
+`AI-GOV-005` &middot; status **accepted** &middot; domain [`governance/`](./)
 
 **Derived from** &mdash; [section 67. Periodic AI Governance Review](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#67-periodic-ai-governance-review)
 <!-- nav:end -->

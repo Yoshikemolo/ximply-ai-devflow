@@ -1,7 +1,7 @@
 ---
 id: AI-AGT-003
 title: Local Models and Organization-Owned Agentic Tooling
-status: proposed
+status: accepted
 domain: agentic-engineering
 owners:
   - engineering
@@ -24,7 +24,7 @@ source:
 The deployment where the whole conceptual chain can be enforced at once: an ordinary model authorized to query a well-structured corpus under the identity and permissions of the person asking. A corporate agent implements this framework; it does not define it.
 
 <!-- nav:start -->
-`AI-AGT-003` &middot; status **proposed** &middot; domain [`agentic-engineering/`](./)
+`AI-AGT-003` &middot; status **accepted** &middot; domain [`agentic-engineering/`](./)
 
 **Related** &mdash; [AI Autonomy Levels `AI-FND-004`](../ai-foundations/autonomy-levels.md) &middot; [Versioned AI Engineering Instructions `AI-KNOW-004`](../knowledge/ai-engineering-instructions.md) &middot; [Evidence and Verification `AI-PRIN-003`](../principles/evidence-and-verification.md) &middot; [AI Context Boundary `AI-SEC-001`](../security/ai-context-boundary.md) &middot; [Agentic Security Boundary `AI-SEC-002`](../security/agentic-security-boundary.md) &middot; [Shell and Tool Execution `AI-SEC-003`](../security/tool-execution.md) &middot; [Dependency Governance `AI-SEC-005`](../security/dependency-governance.md)
 

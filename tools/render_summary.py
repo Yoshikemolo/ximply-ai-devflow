@@ -185,9 +185,9 @@ def render() -> str:
         "",
         sentence(purpose_doc, "> **AI may accelerate engineering work."),
         "",
-        "Most documents are `proposed`: followed as written, not yet settled "
-        "by a decision record, and open to change through the decision "
-        f"process. See {link('AI-PRIN-000', docs)}.",
+        "Every domain document is `accepted`, subject to periodic review and "
+        "open to change through the decision process. See "
+        f"{link('AI-PRIN-000', docs)}.",
         "",
         "## One chain",
         "",

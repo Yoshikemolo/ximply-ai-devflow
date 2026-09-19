@@ -1,7 +1,7 @@
 ---
 id: AI-GOV-007
 title: Decision Process
-status: proposed
+status: accepted
 domain: governance
 owners:
   - engineering
@@ -24,7 +24,7 @@ deserves the same treatment, and it was the one thing the draft did not write
 down.
 
 <!-- nav:start -->
-`AI-GOV-007` &middot; status **proposed** &middot; domain [`governance/`](./)
+`AI-GOV-007` &middot; status **accepted** &middot; domain [`governance/`](./)
 
 **Related** &mdash; [Engineering Governance Model `AI-GOV-001`](governance-model.md) &middot; [Open Questions `AI-GOV-006`](open-questions.md) &middot; [Architecture Decisions and Guardrails `AI-KNOW-003`](../knowledge/architecture-decisions.md) &middot; [Addressable Knowledge `AI-KNOW-005`](../knowledge/addressable-knowledge.md)
 
@@ -56,18 +56,20 @@ becomes a set of rules nobody can defend three years later.
 A domain document carries one of:
 
 ```text
-proposed     applied in practice, not yet settled by a decision record
-accepted     settled by a decision record, agreed by the people it applies to
+proposed     written down, not yet applied or settled
+accepted     applied in practice and settled, subject to periodic review
 deprecated   still true, no longer recommended
 superseded   replaced, kept for the record
 rejected     considered and declined
 ```
 
-Everything in this corpus is currently `proposed` unless its front matter says
-otherwise. That describes how settled a document is, not whether it is used:
-the methodology as a whole is applied in practice by
-[Ximplicity Software Solutions](https://ximplicity.es), and a `proposed`
-document is followed as written until a decision changes it.
+Every domain document is `accepted` since
+[AI-DEC-004](../decisions/AI-DEC-004-accept-the-framework-as-practised.md): the
+methodology is applied in practice by
+[Ximplicity Software Solutions](https://ximplicity.es). Accepted is not final.
+Each document stays subject to [Periodic Review](periodic-review.md), and a
+change to what it asks for goes through the steps below. New material that has
+not been applied yet enters as `proposed`.
 
 ## How a question closes
 

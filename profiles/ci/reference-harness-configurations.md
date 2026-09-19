@@ -1,7 +1,7 @@
 ---
 id: AI-PROF-001
 title: Reference CI Harness Configurations
-status: proposed
+status: accepted
 domain: profiles
 owners:
   - engineering
@@ -18,7 +18,7 @@ source:
 Non-normative worked examples per stack. Expected to age faster than anything in the domain documents, and versioned separately from them.
 
 <!-- nav:start -->
-`AI-PROF-001` &middot; status **proposed** &middot; domain [`profiles/`](../)
+`AI-PROF-001` &middot; status **accepted** &middot; domain [`profiles/`](../)
 
 **Derived from** &mdash; [Annex A — Reference CI Harness Configurations](../../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#annex-a-%E2%80%94-reference-ci-harness-configurations)
 <!-- nav:end -->

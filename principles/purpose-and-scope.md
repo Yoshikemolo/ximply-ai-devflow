@@ -1,7 +1,7 @@
 ---
 id: AI-PRIN-000
 title: Purpose, Scope and Normative Language
-status: proposed
+status: accepted
 domain: principles
 owners:
   - engineering
@@ -20,7 +20,7 @@ source:
 What the framework is for, which engineering activities it covers, and how to read the requirement levels used throughout the corpus. Every other document assumes the reading of MUST, SHOULD and MAY defined here.
 
 <!-- nav:start -->
-`AI-PRIN-000` &middot; status **proposed** &middot; domain [`principles/`](./)
+`AI-PRIN-000` &middot; status **accepted** &middot; domain [`principles/`](./)
 
 **Derived from** &mdash; [section 1. Purpose](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#1-purpose) &middot; [section 2. Scope](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#2-scope) &middot; [section 3. Normative Language](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#3-normative-language)
 <!-- nav:end -->

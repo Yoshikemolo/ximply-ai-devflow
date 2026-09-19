@@ -1,7 +1,7 @@
 ---
 id: AI-VER-006
 title: Static Analysis and Code Quality
-status: proposed
+status: accepted
 domain: verification
 owners:
   - engineering
@@ -19,7 +19,7 @@ source:
 The properties a machine can check without running the code, and the clean-code expectations that generated output is held to.
 
 <!-- nav:start -->
-`AI-VER-006` &middot; status **proposed** &middot; domain [`verification/`](./)
+`AI-VER-006` &middot; status **accepted** &middot; domain [`verification/`](./)
 
 **Derived from** &mdash; [section 45. Static Quality Analysis](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#45-static-quality-analysis) &middot; [section 47. Clean Code Requirements](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#47-clean-code-requirements)
 <!-- nav:end -->

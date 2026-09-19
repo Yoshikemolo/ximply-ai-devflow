@@ -1,7 +1,7 @@
 ---
 id: AI-GOV-006
 title: Open Questions
-status: proposed
+status: accepted
 domain: governance
 owners:
   - engineering
@@ -18,7 +18,7 @@ source:
 What the framework deliberately leaves undecided. This is the agenda for review, not a list of gaps to be quietly filled in.
 
 <!-- nav:start -->
-`AI-GOV-006` &middot; status **proposed** &middot; domain [`governance/`](./)
+`AI-GOV-006` &middot; status **accepted** &middot; domain [`governance/`](./)
 
 **Derived from** &mdash; [section 71. Open Questions and Decisions Required](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#71-open-questions-and-decisions-required)
 <!-- nav:end -->

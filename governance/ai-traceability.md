@@ -1,7 +1,7 @@
 ---
 id: AI-GOV-003
 title: AI Contribution Traceability
-status: proposed
+status: accepted
 domain: governance
 owners:
   - engineering
@@ -18,7 +18,7 @@ source:
 What is worth recording about how a change came to be. The purpose is auditability rather than attribution, and the categories below are an open proposal rather than a decision.
 
 <!-- nav:start -->
-`AI-GOV-003` &middot; status **proposed** &middot; domain [`governance/`](./)
+`AI-GOV-003` &middot; status **accepted** &middot; domain [`governance/`](./)
 
 **Related** &mdash; [Draft Pull Request Declaration `AI-PROF-003`](../profiles/pull-request/declaration.md)
 

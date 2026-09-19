@@ -1,7 +1,7 @@
 ---
 id: AI-PROF-003
 title: Draft Pull Request Declaration
-status: proposed
+status: accepted
 domain: profiles
 owners:
   - engineering
@@ -18,7 +18,7 @@ source:
 A template sketch for the author declaration, offered as material for the traceability discussion rather than as an adopted form.
 
 <!-- nav:start -->
-`AI-PROF-003` &middot; status **proposed** &middot; domain [`profiles/`](../)
+`AI-PROF-003` &middot; status **accepted** &middot; domain [`profiles/`](../)
 
 **Related** &mdash; [Open Questions `AI-GOV-006`](../../governance/open-questions.md)
 

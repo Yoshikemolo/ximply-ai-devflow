@@ -1,7 +1,7 @@
 ---
 id: AI-KNOW-001
 title: Repository as Engineering Source of Truth
-status: proposed
+status: accepted
 domain: knowledge
 owners:
   - engineering
@@ -19,7 +19,7 @@ source:
 The authoritative account of a system lives in its repository, not in conversations, tickets or memory. This is the first link of the conceptual chain: without it there is nothing authoritative to retrieve.
 
 <!-- nav:start -->
-`AI-KNOW-001` &middot; status **proposed** &middot; domain [`knowledge/`](./)
+`AI-KNOW-001` &middot; status **accepted** &middot; domain [`knowledge/`](./)
 
 **Derived from** &mdash; [section 12. Repository as Engineering Source of Truth](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#12-repository-as-engineering-source-of-truth) &middot; [section 14. README](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#14-readme)
 <!-- nav:end -->

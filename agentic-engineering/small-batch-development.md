@@ -1,7 +1,7 @@
 ---
 id: AI-AGT-005
 title: Small-Batch AI Development
-status: proposed
+status: accepted
 domain: agentic-engineering
 owners:
   - engineering
@@ -18,7 +18,7 @@ source:
 A change is accepted at the speed it can be understood. Reviewability, not model capability, is the constraint that sets batch size.
 
 <!-- nav:start -->
-`AI-AGT-005` &middot; status **proposed** &middot; domain [`agentic-engineering/`](./)
+`AI-AGT-005` &middot; status **accepted** &middot; domain [`agentic-engineering/`](./)
 
 **Related** &mdash; [Context-Informed Prompting Protocol `AI-AGT-002`](context-informed-prompting.md)
 

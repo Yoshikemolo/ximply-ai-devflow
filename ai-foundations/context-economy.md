@@ -1,7 +1,7 @@
 ---
 id: AI-FND-003
 title: Context Economy
-status: proposed
+status: accepted
 domain: ai-foundations
 owners:
   - engineering
@@ -18,7 +18,7 @@ source:
 Attention is finite and degrades with volume. A large corpus helps only if it can be consumed in small, high-signal pieces, which is what makes the rest of the conceptual chain necessary rather than merely tidy.
 
 <!-- nav:start -->
-`AI-FND-003` &middot; status **proposed** &middot; domain [`ai-foundations/`](./)
+`AI-FND-003` &middot; status **accepted** &middot; domain [`ai-foundations/`](./)
 
 **Derived from** &mdash; [section 7. Context Economy: Coherence, Degradation and Model Fit](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#7-context-economy-coherence-degradation-and-model-fit)
 <!-- nav:end -->

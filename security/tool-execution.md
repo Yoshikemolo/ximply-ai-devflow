@@ -1,7 +1,7 @@
 ---
 id: AI-SEC-003
 title: Shell and Tool Execution
-status: proposed
+status: accepted
 domain: security
 owners:
   - engineering
@@ -18,7 +18,7 @@ source:
 What an agent is allowed to do. Where the context boundary governs information, this governs action: which commands and tools may execute, under whose identity, and with what approval.
 
 <!-- nav:start -->
-`AI-SEC-003` &middot; status **proposed** &middot; domain [`security/`](./)
+`AI-SEC-003` &middot; status **accepted** &middot; domain [`security/`](./)
 
 **Related** &mdash; [Local Models and Organization-Owned Agentic Tooling `AI-AGT-003`](../agentic-engineering/local-and-corporate-agents.md)
 

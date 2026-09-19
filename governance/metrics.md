@@ -1,7 +1,7 @@
 ---
 id: AI-GOV-004
 title: Metrics
-status: proposed
+status: accepted
 domain: governance
 owners:
   - engineering
@@ -18,7 +18,7 @@ source:
 What is measured to know whether the framework is working, and what measuring it distorts.
 
 <!-- nav:start -->
-`AI-GOV-004` &middot; status **proposed** &middot; domain [`governance/`](./)
+`AI-GOV-004` &middot; status **accepted** &middot; domain [`governance/`](./)
 
 **Derived from** &mdash; [section 66. Metrics](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#66-metrics)
 <!-- nav:end -->

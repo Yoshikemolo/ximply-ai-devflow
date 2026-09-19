@@ -1,7 +1,7 @@
 ---
 id: AI-KNOW-004
 title: Versioned AI Engineering Instructions
-status: proposed
+status: accepted
 domain: knowledge
 owners:
   - engineering
@@ -19,7 +19,7 @@ source:
 Reusable engineering rules belong in the repository, versioned with the code they govern. The complementary half of the same decision is keeping private local agent configuration out of version control.
 
 <!-- nav:start -->
-`AI-KNOW-004` &middot; status **proposed** &middot; domain [`knowledge/`](./)
+`AI-KNOW-004` &middot; status **accepted** &middot; domain [`knowledge/`](./)
 
 **Related** &mdash; [Agentic Security Boundary `AI-SEC-002`](../security/agentic-security-boundary.md)
 

@@ -1,7 +1,7 @@
 ---
 id: AI-PROF-002
 title: Proposed Quality Gate Baselines
-status: proposed
+status: accepted
 domain: profiles
 owners:
   - engineering
@@ -18,7 +18,7 @@ source:
 The concrete numbers, kept out of the domain documents on purpose so that discussing a coverage percentage does not mean reopening the framework.
 
 <!-- nav:start -->
-`AI-PROF-002` &middot; status **proposed** &middot; domain [`profiles/`](../)
+`AI-PROF-002` &middot; status **accepted** &middot; domain [`profiles/`](../)
 
 **Derived from** &mdash; [Annex B — Proposed Quality Gate Baselines](../../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#annex-b-%E2%80%94-proposed-quality-gate-baselines)
 <!-- nav:end -->

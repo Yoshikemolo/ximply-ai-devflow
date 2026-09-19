@@ -100,13 +100,14 @@ Every document opens with front matter:
 
 ```yaml
 id: AI-SEC-001          # stable identifier, cite this rather than a path
-status: proposed        # proposed | accepted | deprecated | superseded | rejected
+status: accepted        # proposed | accepted | deprecated | superseded | rejected
 applies_to: [...]       # where it is meant to bite
 related: [...]          # identifiers this document links to
 source: [...]           # where in the draft it came from
 ```
 
-`status` is the field that matters. Everything is currently `proposed`.
+`status` is the field that matters. Every domain document is `accepted`,
+subject to review — see [AI-DEC-004](decisions/AI-DEC-004-accept-the-framework-as-practised.md).
 
 Passages marked `> **Discussion point.**` are places where the wording is a
 provisional position rather than a conclusion. They are the best places to
@@ -186,6 +187,7 @@ client projects; client work is covered by non-disclosure agreements and is not
 named here. [EVIDENT App](https://evidentapp.ai), one of Ximplicity's recent products, is an example of a
 product built under it.
 
-It is a living methodology and remains subject to change. Rules evolve through
-the [decision process](governance/decision-process.md), and questions still
+It is a living methodology and remains subject to change. Every domain
+document is `accepted` subject to review ([AI-DEC-004](decisions/AI-DEC-004-accept-the-framework-as-practised.md)); rules evolve through the
+[decision process](governance/decision-process.md), and questions still
 unsettled are listed under [Open Questions](governance/open-questions.md).

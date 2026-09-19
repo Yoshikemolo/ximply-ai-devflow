@@ -1,7 +1,7 @@
 ---
 id: AI-FND-002
 title: Agentic Bias
-status: proposed
+status: accepted
 domain: ai-foundations
 owners:
   - engineering
@@ -18,7 +18,7 @@ source:
 Designed agreeableness and miscalibrated confidence, and why a session tends to confirm its own output. This is the reason verification has to come from outside the conversation that produced the work.
 
 <!-- nav:start -->
-`AI-FND-002` &middot; status **proposed** &middot; domain [`ai-foundations/`](./)
+`AI-FND-002` &middot; status **accepted** &middot; domain [`ai-foundations/`](./)
 
 **Related** &mdash; [Context Economy `AI-FND-003`](context-economy.md)
 

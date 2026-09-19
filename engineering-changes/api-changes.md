@@ -1,7 +1,7 @@
 ---
 id: AI-CHG-001
 title: API Changes
-status: proposed
+status: accepted
 domain: engineering-changes
 owners:
   - engineering
@@ -18,7 +18,7 @@ source:
 Playbook for changing a published contract without breaking its consumers.
 
 <!-- nav:start -->
-`AI-CHG-001` &middot; status **proposed** &middot; domain [`engineering-changes/`](./)
+`AI-CHG-001` &middot; status **accepted** &middot; domain [`engineering-changes/`](./)
 
 **Derived from** &mdash; [section 53. API Changes](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#53-api-changes)
 <!-- nav:end -->

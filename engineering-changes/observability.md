@@ -1,7 +1,7 @@
 ---
 id: AI-CHG-003
 title: Observability
-status: proposed
+status: accepted
 domain: engineering-changes
 owners:
   - engineering
@@ -18,7 +18,7 @@ source:
 What a change must emit to be operable, and the conventions that keep it consistent across services.
 
 <!-- nav:start -->
-`AI-CHG-003` &middot; status **proposed** &middot; domain [`engineering-changes/`](./)
+`AI-CHG-003` &middot; status **accepted** &middot; domain [`engineering-changes/`](./)
 
 **Derived from** &mdash; [section 52. Observability](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#52-observability)
 <!-- nav:end -->

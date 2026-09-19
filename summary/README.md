@@ -14,7 +14,7 @@ The framework treats AI systems as **engineering assistants operating within exp
 
 > **AI may accelerate engineering work. It must never lower the engineering standard required to accept that work.**
 
-Most documents are `proposed`: followed as written, not yet settled by a decision record, and open to change through the decision process. See [Purpose, Scope and Normative Language `AI-PRIN-000`](../principles/purpose-and-scope.md).
+Every domain document is `accepted`, subject to periodic review and open to change through the decision process. See [Purpose, Scope and Normative Language `AI-PRIN-000`](../principles/purpose-and-scope.md).
 
 ## One chain
 
@@ -107,7 +107,7 @@ The concrete numbers, kept out of the domain documents on purpose so that discus
 ## Where the rest is
 
 - [`engineering-changes/`](../engineering-changes/) &mdash; 3 playbooks for specific kinds of risky change: APIs, databases, observability.
-- [`decisions/`](../decisions/) &mdash; 3 records of what was chosen and what was rejected. Append-only.
+- [`decisions/`](../decisions/) &mdash; 4 records of what was chosen and what was rejected. Append-only.
 - [Open Questions](../governance/open-questions.md) &mdash; what is deliberately undecided, one document per question.
 - [`compiled/`](../compiled/) &mdash; the original draft, frozen. A snapshot, not a source.
 

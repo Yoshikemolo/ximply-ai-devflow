@@ -1,7 +1,7 @@
 ---
 id: AI-VER-002
 title: Testing Strategy
-status: proposed
+status: accepted
 domain: verification
 owners:
   - engineering
@@ -24,7 +24,7 @@ source:
 How test effort is allocated against risk, what each test level is evidence of, and what changes when the tests are themselves AI-generated. One document because these choices are made together, not one level at a time.
 
 <!-- nav:start -->
-`AI-VER-002` &middot; status **proposed** &middot; domain [`verification/`](./)
+`AI-VER-002` &middot; status **accepted** &middot; domain [`verification/`](./)
 
 **Derived from** &mdash; [section 28. Risk-Based Test Portfolio](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#28-risk-based-test-portfolio) &middot; [section 29. Unit Tests](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#29-unit-tests) &middot; [section 30. Integration Tests and Real Dependencies](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#30-integration-tests-and-real-dependencies) &middot; [section 31. Contract Testing](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#31-contract-testing) &middot; [section 32. End-to-End Tests](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#32-end-to-end-tests) &middot; [section 33. Test Maintenance](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#33-test-maintenance) &middot; [section 34. AI-Assisted Test Generation](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#34-ai-assisted-test-generation)
 <!-- nav:end -->
