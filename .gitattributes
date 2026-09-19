@@ -5,6 +5,7 @@
 *.json text eol=lf
 *.yml text eol=lf
 *.yaml text eol=lf
+.githooks/* text eol=lf
 
 # Binary document formats: never diff or normalize.
 *.docx binary

@@ -58,6 +58,13 @@ Types: `feat`, `fix`, `refactor`, `perf`, `test`, `docs`, `build`, `ci`,
 No emoji. No attribution or co-author trailers. Cite the decision record when
 a change implements one.
 
+Enable the commit-msg hook once per clone so a message that breaks the
+convention is rejected locally rather than in CI:
+
+```bash
+git config core.hooksPath .githooks
+```
+
 ## Branches
 
 Work outside protected branches:

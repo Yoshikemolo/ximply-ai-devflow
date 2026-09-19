@@ -1,0 +1,12 @@
+#!/bin/sh
+# Reject a commit whose message breaks docs/ai/commits.md: English only,
+# no emoji, no attribution trailers, conventional subject.
+# Enable once per clone with: git config core.hooksPath .githooks
+
+for python in python3 python; do
+  if command -v "$python" >/dev/null 2>&1; then
+    exec "$python" "$(git rev-parse --show-toplevel)/tools/check_commit_msg.py" "$1"
+  fi
+done
+echo "commit-msg: Python not found; the commit message was not checked." >&2
+exit 1

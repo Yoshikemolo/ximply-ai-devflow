@@ -99,6 +99,24 @@ Every commit MUST NOT:
 3. Amend or rewrite a commit that has already been published to a shared
    branch.
 
+## Enforcement
+
+The mechanical part of this rule - the subject format, English only, no emoji
+and no attribution - is checked by `tools/check_commit_msg.py` at three points,
+so no single one has to be trusted:
+
+- **On the author's machine.** The `commit-msg` hook in `.githooks/` rejects
+  the commit before it exists. Enable it once per clone with
+  `git config core.hooksPath .githooks`.
+- **In the AI assistant.** `.claude/settings.json` turns off the attribution
+  Claude Code would otherwise append to commits and Pull Requests, and enables
+  the hook at the start of every session.
+- **On GitHub.** The `Commit check` workflow runs the same script over every
+  commit in a push to `main` or a Pull Request.
+
+The checker cannot judge whether a commit is one logical change or whether its
+body explains why. Those remain the reviewer's job.
+
 ## Branch boundary
 
 AI-assisted work happens outside protected shared branches. Commits are made on
