@@ -1,7 +1,7 @@
 ---
 id: AI-FND-004
 title: AI Autonomy Levels
-status: proposed
+status: accepted
 domain: ai-foundations
 owners:
   - engineering
@@ -18,7 +18,7 @@ source:
 Shared vocabulary for how much an agent is permitted to do without a human step. The levels are defined here because several domains refer to them; where they are granted and enforced belongs to the agentic engineering domain.
 
 <!-- nav:start -->
-`AI-FND-004` &middot; status **proposed** &middot; domain [`ai-foundations/`](./)
+`AI-FND-004` &middot; status **accepted** &middot; domain [`ai-foundations/`](./)
 
 **Derived from** &mdash; [section 11. AI Autonomy Levels](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#11-ai-autonomy-levels)
 <!-- nav:end -->

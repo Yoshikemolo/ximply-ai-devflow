@@ -1,12 +1,13 @@
 # AI-Assisted Software Engineering Framework
 
-A proposed engineering standard for software development assisted by AI
-systems: where AI fits, what stays human, and what a change must prove before
-it is allowed to become accepted software.
+An engineering methodology for software development assisted by AI systems:
+where AI fits, what stays human, and what a change must prove before it is
+allowed to become accepted software.
 
-**Nothing here is in force.** Every document is a proposal open to challenge.
-Requirement levels — MUST, SHOULD, MAY — express *the strength being proposed
-for that item*, not an obligation. See
+**In practice.** [Ximplicity Software Solutions](https://ximplicity.es) applies this methodology today in its own products and in
+client projects. It is a living methodology: every document can still be
+challenged and changed through the [decision process](governance/decision-process.md),
+and requirement levels — MUST, SHOULD, MAY — are the levels applied now. See
 [Purpose, Scope and Normative Language](principles/purpose-and-scope.md).
 
 ## Start here
@@ -30,8 +31,8 @@ and a record of where it came from.
 Not a tool manual, not a product, and not a description of any particular
 agent. An implementation applies this framework; it does not define it.
 
-Not a finished standard either. The corpus is complete in the sense that the
-whole draft has been placed, not in the sense that it has been agreed.
+Not a finished standard either. The methodology is in use, and it is expected
+to keep changing as that use shows what works and what does not.
 
 ## The idea it rests on
 
@@ -99,13 +100,14 @@ Every document opens with front matter:
 
 ```yaml
 id: AI-SEC-001          # stable identifier, cite this rather than a path
-status: proposed        # proposed | accepted | deprecated | superseded | rejected
+status: accepted        # proposed | accepted | deprecated | superseded | rejected
 applies_to: [...]       # where it is meant to bite
 related: [...]          # identifiers this document links to
 source: [...]           # where in the draft it came from
 ```
 
-`status` is the field that matters. Everything is currently `proposed`.
+`status` is the field that matters. Every domain document is `accepted`,
+subject to review — see [AI-DEC-004](decisions/AI-DEC-004-accept-the-framework-as-practised.md).
 
 Passages marked `> **Discussion point.**` are places where the wording is a
 provisional position rather than a conclusion. They are the best places to
@@ -180,4 +182,12 @@ first four have been used enough to know what they got wrong.
 
 ## Status
 
-Draft. Under discussion. Not ratified, not adopted, not enforced.
+In practice. [Ximplicity Software Solutions](https://ximplicity.es) actively applies this methodology in its own products and in
+client projects; client work is covered by non-disclosure agreements and is not
+named here. [EVIDENT App](https://evidentapp.ai), one of Ximplicity's recent products, is an example of a
+product built under it.
+
+It is a living methodology and remains subject to change. Every domain
+document is `accepted` subject to review ([AI-DEC-004](decisions/AI-DEC-004-accept-the-framework-as-practised.md)); rules evolve through the
+[decision process](governance/decision-process.md), and questions still
+unsettled are listed under [Open Questions](governance/open-questions.md).

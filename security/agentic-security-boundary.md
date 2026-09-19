@@ -1,7 +1,7 @@
 ---
 id: AI-SEC-002
 title: Agentic Security Boundary
-status: proposed
+status: accepted
 domain: security
 owners:
   - engineering
@@ -20,7 +20,7 @@ source:
 Context aggregation risk, progressive disclosure, and the protection of intellectual property that no individual file would identify as confidential. Sensitivity is a property of the accumulated context, not of the item.
 
 <!-- nav:start -->
-`AI-SEC-002` &middot; status **proposed** &middot; domain [`security/`](./)
+`AI-SEC-002` &middot; status **accepted** &middot; domain [`security/`](./)
 
 **Related** &mdash; [Local Models and Organization-Owned Agentic Tooling `AI-AGT-003`](../agentic-engineering/local-and-corporate-agents.md) &middot; [Human Accountability `AI-PRIN-002`](../principles/human-accountability.md) &middot; [AI Context Boundary `AI-SEC-001`](ai-context-boundary.md)
 

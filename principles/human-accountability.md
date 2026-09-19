@@ -1,7 +1,7 @@
 ---
 id: AI-PRIN-002
 title: Human Accountability
-status: proposed
+status: accepted
 domain: principles
 owners:
   - engineering
@@ -22,7 +22,7 @@ source:
 Who answers for a change, and which decisions are not delegable. This document draws the line between what an AI system may contribute and what only an accountable engineer may decide.
 
 <!-- nav:start -->
-`AI-PRIN-002` &middot; status **proposed** &middot; domain [`principles/`](./)
+`AI-PRIN-002` &middot; status **accepted** &middot; domain [`principles/`](./)
 
 **Related** &mdash; [Local Models and Organization-Owned Agentic Tooling `AI-AGT-003`](../agentic-engineering/local-and-corporate-agents.md) &middot; [Compliance and Exceptions `AI-GOV-002`](../governance/compliance-and-exceptions.md) &middot; [Open Questions `AI-GOV-006`](../governance/open-questions.md) &middot; [Human Review `AI-INT-004`](../integration/human-review.md)
 

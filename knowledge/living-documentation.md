@@ -1,7 +1,7 @@
 ---
 id: AI-KNOW-002
 title: Living Documentation
-status: proposed
+status: accepted
 domain: knowledge
 owners:
   - engineering
@@ -18,7 +18,7 @@ source:
 The repository is only authoritative if it is kept true. Documentation that contradicts the implementation is a defect, and the second link of the chain depends on treating it as one.
 
 <!-- nav:start -->
-`AI-KNOW-002` &middot; status **proposed** &middot; domain [`knowledge/`](./)
+`AI-KNOW-002` &middot; status **accepted** &middot; domain [`knowledge/`](./)
 
 **Related** &mdash; [Context Economy `AI-FND-003`](../ai-foundations/context-economy.md)
 

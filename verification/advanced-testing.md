@@ -1,7 +1,7 @@
 ---
 id: AI-VER-004
 title: Property-Based and Mutation Testing
-status: proposed
+status: accepted
 domain: verification
 owners:
   - engineering
@@ -19,7 +19,7 @@ source:
 Techniques that check the test suite rather than the implementation, and that become more valuable as the volume of generated code grows.
 
 <!-- nav:start -->
-`AI-VER-004` &middot; status **proposed** &middot; domain [`verification/`](./)
+`AI-VER-004` &middot; status **accepted** &middot; domain [`verification/`](./)
 
 **Derived from** &mdash; [section 41. Property-Based and Invariant Testing](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#41-property-based-and-invariant-testing) &middot; [section 42. Mutation Testing](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#42-mutation-testing)
 <!-- nav:end -->

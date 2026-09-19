@@ -89,7 +89,7 @@ POTENTIAL NORMATIVE CONFLICT
               condition X.
   AI-SEC-001  appears to prohibit proprietary code reaching external models.
 
-  Both are status: proposed. Neither supersedes the other.
+  Both are status: accepted. Neither supersedes the other.
 
   Do not resolve automatically. Human decision required.
   Closest open question: OQ-0008.

@@ -1,7 +1,7 @@
 ---
 id: AI-SEC-004
 title: Security Verification and Threat Modeling
-status: proposed
+status: accepted
 domain: security
 owners:
   - engineering
@@ -19,7 +19,7 @@ source:
 The security checks a change passes before integration, and when a change is significant enough to require revisiting the threat model.
 
 <!-- nav:start -->
-`AI-SEC-004` &middot; status **proposed** &middot; domain [`security/`](./)
+`AI-SEC-004` &middot; status **accepted** &middot; domain [`security/`](./)
 
 **Derived from** &mdash; [section 48. Security Verification](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#48-security-verification) &middot; [section 49. Threat Modeling](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#49-threat-modeling)
 <!-- nav:end -->

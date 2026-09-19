@@ -1,7 +1,7 @@
 ---
 id: AI-KNOW-003
 title: Architecture Decisions and Guardrails
-status: proposed
+status: accepted
 domain: knowledge
 owners:
   - engineering
@@ -19,7 +19,7 @@ source:
 How architectural decisions are recorded so they can be cited, superseded and checked against, and what an assistant must inspect before changing a system. AI may draft a decision; it may not accept one.
 
 <!-- nav:start -->
-`AI-KNOW-003` &middot; status **proposed** &middot; domain [`knowledge/`](./)
+`AI-KNOW-003` &middot; status **accepted** &middot; domain [`knowledge/`](./)
 
 **Derived from** &mdash; [section 15. Architecture Decision Records](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#15-architecture-decision-records) &middot; [section 16. Architecture Guardrails](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#16-architecture-guardrails)
 <!-- nav:end -->

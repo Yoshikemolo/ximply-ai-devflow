@@ -1,7 +1,7 @@
 ---
 id: AI-GOV-006
 title: Open Questions
-status: proposed
+status: accepted
 domain: governance
 owners:
   - engineering
@@ -18,14 +18,14 @@ source:
 What the framework deliberately leaves undecided. This is the agenda for review, not a list of gaps to be quietly filled in.
 
 <!-- nav:start -->
-`AI-GOV-006` &middot; status **proposed** &middot; domain [`governance/`](./)
+`AI-GOV-006` &middot; status **accepted** &middot; domain [`governance/`](./)
 
 **Derived from** &mdash; [section 71. Open Questions and Decisions Required](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#71-open-questions-and-decisions-required)
 <!-- nav:end -->
 
 ---
 
-This section collects the points that this draft deliberately leaves open. They are the agenda for engineering review rather than positions already taken. Each one is written as a question, with the options currently visible and the provisional position taken in the text so that the draft remains readable.
+This section collects the points that the framework deliberately leaves open, even though the methodology is already applied in practice. They are the agenda for engineering review rather than positions already taken. Each one is written as a question, with the options currently visible and the provisional position taken in the text so that the draft remains readable.
 
 Each question is its own document, with its own status, its own owner and its own history. A question is not a paragraph in a list: it is opened, argued and eventually closed, and bundling twelve of them into one file meant they could only be cited, versioned and answered together.
 

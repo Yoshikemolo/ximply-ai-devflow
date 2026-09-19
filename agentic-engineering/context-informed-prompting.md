@@ -1,7 +1,7 @@
 ---
 id: AI-AGT-002
 title: Context-Informed Prompting Protocol
-status: proposed
+status: accepted
 domain: agentic-engineering
 owners:
   - engineering
@@ -18,7 +18,7 @@ source:
 How a task is framed before an agent starts: the context injected, the constraints stated, and the checkpoints defined. This is where minimum necessary context stops being a policy and becomes a practice.
 
 <!-- nav:start -->
-`AI-AGT-002` &middot; status **proposed** &middot; domain [`agentic-engineering/`](./)
+`AI-AGT-002` &middot; status **accepted** &middot; domain [`agentic-engineering/`](./)
 
 **Related** &mdash; [Agentic Security Boundary `AI-SEC-002`](../security/agentic-security-boundary.md)
 

@@ -1,7 +1,7 @@
 ---
 id: AI-PRIN-001
 title: Engineering Principles
-status: proposed
+status: accepted
 domain: principles
 owners:
   - engineering
@@ -25,7 +25,7 @@ source:
 The seven ideas the rest of the corpus implements, and the conceptual chain that connects them. If consensus fails here, nothing further down is worth arguing about yet.
 
 <!-- nav:start -->
-`AI-PRIN-001` &middot; status **proposed** &middot; domain [`principles/`](./)
+`AI-PRIN-001` &middot; status **accepted** &middot; domain [`principles/`](./)
 
 **Related** &mdash; [Local Models and Organization-Owned Agentic Tooling `AI-AGT-003`](../agentic-engineering/local-and-corporate-agents.md) &middot; [Context Economy `AI-FND-003`](../ai-foundations/context-economy.md) &middot; [Repository as Engineering Source of Truth `AI-KNOW-001`](../knowledge/repository-source-of-truth.md) &middot; [Living Documentation `AI-KNOW-002`](../knowledge/living-documentation.md) &middot; [AI Context Boundary `AI-SEC-001`](../security/ai-context-boundary.md) &middot; [Agentic Security Boundary `AI-SEC-002`](../security/agentic-security-boundary.md)
 

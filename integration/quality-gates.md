@@ -1,7 +1,7 @@
 ---
 id: AI-INT-005
 title: Automated Quality Gates and CI Pipeline
-status: proposed
+status: accepted
 domain: integration
 owners:
   - engineering
@@ -19,7 +19,7 @@ source:
 The checks that run without asking anyone, and the branch protection that makes them a boundary rather than a suggestion. Concrete thresholds live in the implementation profiles so that changing a number does not reopen the framework.
 
 <!-- nav:start -->
-`AI-INT-005` &middot; status **proposed** &middot; domain [`integration/`](./)
+`AI-INT-005` &middot; status **accepted** &middot; domain [`integration/`](./)
 
 **Related** &mdash; [Proposed Quality Gate Baselines `AI-PROF-002`](../profiles/quality-gates/baselines.md)
 

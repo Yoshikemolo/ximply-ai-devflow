@@ -1,7 +1,7 @@
 ---
 id: AI-KNOW-005
 title: Addressable Knowledge
-status: proposed
+status: accepted
 domain: knowledge
 owners:
   - engineering
@@ -19,7 +19,7 @@ source:
 Versioning tells you which text you have; an identifier tells you which decision you are talking about. This is what turns a documentation tree into a queryable corpus, and it is the precondition for selective retrieval by an agent. This repository is the first place the idea is being tried.
 
 <!-- nav:start -->
-`AI-KNOW-005` &middot; status **proposed** &middot; domain [`knowledge/`](./)
+`AI-KNOW-005` &middot; status **accepted** &middot; domain [`knowledge/`](./)
 
 **Related** &mdash; [Open Questions `AI-GOV-006`](../governance/open-questions.md)
 

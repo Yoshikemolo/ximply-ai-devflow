@@ -1,7 +1,7 @@
 ---
 id: AI-INT-002
 title: Branch Management
-status: proposed
+status: accepted
 domain: integration
 owners:
   - engineering
@@ -18,7 +18,7 @@ source:
 Assisted work happens outside protected branches, whatever those branches are called. The branching model is a team decision; the boundary is not.
 
 <!-- nav:start -->
-`AI-INT-002` &middot; status **proposed** &middot; domain [`integration/`](./)
+`AI-INT-002` &middot; status **accepted** &middot; domain [`integration/`](./)
 
 **Related** &mdash; [Automated Quality Gates and CI Pipeline `AI-INT-005`](quality-gates.md)
 
@@ -27,7 +27,7 @@ Assisted work happens outside protected branches, whatever those branches are ca
 
 ---
 
-The branching model itself is a team decision, and the one below is simply the model this draft assumes. What the document argues for is narrower: that AI-assisted work happens outside protected branches, whatever those branches are called.
+The branching model itself is a team decision, and the one below is simply the model this framework assumes. What the document argues for is narrower: that AI-assisted work happens outside protected branches, whatever those branches are called.
 
 Assumed model:
 

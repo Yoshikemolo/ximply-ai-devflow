@@ -1,7 +1,7 @@
 ---
 id: AI-VER-003
 title: Synthetic and Generated Test Data
-status: proposed
+status: accepted
 domain: verification
 owners:
   - engineering
@@ -23,7 +23,7 @@ source:
 Generated fixtures and mock data are engineering assets with a provenance, a safety boundary and a validation requirement. They are not disposable output.
 
 <!-- nav:start -->
-`AI-VER-003` &middot; status **proposed** &middot; domain [`verification/`](./)
+`AI-VER-003` &middot; status **accepted** &middot; domain [`verification/`](./)
 
 **Derived from** &mdash; [section 35. AI-Generated Mock and Synthetic Test Data](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#35-ai-generated-mock-and-synthetic-test-data) &middot; [section 36. Synthetic Data Safety Rules](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#36-synthetic-data-safety-rules) &middot; [section 37. Synthetic Data Provenance](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#37-synthetic-data-provenance) &middot; [section 38. Scenario-Based Test Data](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#38-scenario-based-test-data) &middot; [section 39. Synthetic Data Validation](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#39-synthetic-data-validation) &middot; [section 40. Golden and Regression Datasets](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#40-golden-and-regression-datasets)
 <!-- nav:end -->

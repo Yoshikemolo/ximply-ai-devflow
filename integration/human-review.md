@@ -1,7 +1,7 @@
 ---
 id: AI-INT-004
 title: Human Review
-status: proposed
+status: accepted
 domain: integration
 owners:
   - engineering
@@ -19,7 +19,7 @@ source:
 What a human reviewer is responsible for that no automated check covers, and the place AI review occupies alongside it rather than instead of it.
 
 <!-- nav:start -->
-`AI-INT-004` &middot; status **proposed** &middot; domain [`integration/`](./)
+`AI-INT-004` &middot; status **accepted** &middot; domain [`integration/`](./)
 
 **Derived from** &mdash; [section 61. Human Review](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#61-human-review) &middot; [section 57. AI Review as Additional Review](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#57-ai-review-as-additional-review)
 <!-- nav:end -->

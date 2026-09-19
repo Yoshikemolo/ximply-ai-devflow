@@ -181,11 +181,12 @@ def render() -> str:
         "",
         paragraph_after(purpose_doc, "## Purpose"),
         "",
-        sentence(purpose_doc, "The proposal treats AI systems as"),
+        sentence(purpose_doc, "The framework treats AI systems as"),
         "",
         sentence(purpose_doc, "> **AI may accelerate engineering work."),
         "",
-        "Everything here is `proposed` and nothing is in force. See "
+        "Every domain document is `accepted`, subject to periodic review and "
+        "open to change through the decision process. See "
         f"{link('AI-PRIN-000', docs)}.",
         "",
         "## One chain",

@@ -1,7 +1,7 @@
 ---
 id: AI-INT-003
 title: Pull Request Boundary
-status: proposed
+status: accepted
 domain: integration
 owners:
   - engineering
@@ -20,7 +20,7 @@ source:
 The Pull Request is the principal integration quality boundary: what a change must satisfy to be considered for acceptance, and what its author declares.
 
 <!-- nav:start -->
-`AI-INT-003` &middot; status **proposed** &middot; domain [`integration/`](./)
+`AI-INT-003` &middot; status **accepted** &middot; domain [`integration/`](./)
 
 **Derived from** &mdash; [section 58. Pull Request Boundary](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#58-pull-request-boundary) &middot; [section 59. Pull Request Acceptance Criteria](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#59-pull-request-acceptance-criteria) &middot; [section 60. Pull Request Checklist](../compiled/AI-Assisted%20Software%20Engineering%20Framework%20-%20draft%20EN202608161000.md#60-pull-request-checklist)
 <!-- nav:end -->

@@ -1,7 +1,7 @@
 ---
 id: AI-VER-001
 title: Verification Independence
-status: proposed
+status: accepted
 domain: verification
 owners:
   - engineering
@@ -18,7 +18,7 @@ source:
 The AI-specific rule: what checks the work must not be what produced it. This is the operational consequence of agentic bias.
 
 <!-- nav:start -->
-`AI-VER-001` &middot; status **proposed** &middot; domain [`verification/`](./)
+`AI-VER-001` &middot; status **accepted** &middot; domain [`verification/`](./)
 
 **Related** &mdash; [Agentic Bias `AI-FND-002`](../ai-foundations/agentic-bias.md)
 
