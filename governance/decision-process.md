@@ -56,15 +56,18 @@ becomes a set of rules nobody can defend three years later.
 A domain document carries one of:
 
 ```text
-proposed     written down, not agreed
-accepted     agreed by the people it applies to
+proposed     applied in practice, not yet settled by a decision record
+accepted     settled by a decision record, agreed by the people it applies to
 deprecated   still true, no longer recommended
 superseded   replaced, kept for the record
 rejected     considered and declined
 ```
 
 Everything in this corpus is currently `proposed` unless its front matter says
-otherwise. Nothing in it is in force.
+otherwise. That describes how settled a document is, not whether it is used:
+the methodology as a whole is applied in practice by
+[Ximplicity Software Solutions](https://ximplicity.es), and a `proposed`
+document is followed as written until a decision changes it.
 
 ## How a question closes
 

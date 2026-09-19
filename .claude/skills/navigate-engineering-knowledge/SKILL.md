@@ -76,9 +76,11 @@ not report them as if the corpus declared them - that scheme is still open in
    `summary/README.md` is a derived navigation layer: use it to find the
    document, then read the document. It is a route, never evidence, and it
    never appears in a citation.
-4. **Check `status` before quoting.** Everything in this corpus is currently
-   `proposed` and nothing is in force. Say so when it matters: "the framework
-   proposes X" is accurate, "the framework requires X" is not.
+4. **Check `status` before quoting.** The methodology is applied in practice,
+   but most documents are still `proposed`: followed as written, not yet
+   settled by a decision record. Say so when it matters: "the framework
+   requires X, not yet settled by a decision record" is accurate for a
+   `proposed` document; only an `accepted` one is settled.
 5. **A question is not an answer.** An `open` question under
    `governance/open-questions/` records what has not been decided. Its
    "Provisional position" is a reading aid, never a rule to apply.

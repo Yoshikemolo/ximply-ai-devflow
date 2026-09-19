@@ -25,7 +25,7 @@ What the framework deliberately leaves undecided. This is the agenda for review,
 
 ---
 
-This section collects the points that this draft deliberately leaves open. They are the agenda for engineering review rather than positions already taken. Each one is written as a question, with the options currently visible and the provisional position taken in the text so that the draft remains readable.
+This section collects the points that the framework deliberately leaves open, even though the methodology is already applied in practice. They are the agenda for engineering review rather than positions already taken. Each one is written as a question, with the options currently visible and the provisional position taken in the text so that the draft remains readable.
 
 Each question is its own document, with its own status, its own owner and its own history. A question is not a paragraph in a list: it is opened, argued and eventually closed, and bundling twelve of them into one file meant they could only be cited, versioned and answered together.
 

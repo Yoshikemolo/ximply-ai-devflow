@@ -8,13 +8,13 @@
 
 ## What this framework is for
 
-This document proposes the engineering practices that would govern software development assisted by Artificial Intelligence. It is a draft for engineering review: the practices below are put forward for discussion, not issued as rules.
+This document sets out the engineering practices that govern software development assisted by Artificial Intelligence. They are applied in practice by [Ximplicity Software Solutions](https://ximplicity.es) in its own products, such as [EVIDENT App](https://evidentapp.ai), and in client projects. The methodology is living: the practices below remain open to review and change through the [decision process](../governance/decision-process.md).
 
-The proposal treats AI systems as **engineering assistants operating within explicitly defined boundaries**.
+The framework treats AI systems as **engineering assistants operating within explicitly defined boundaries**.
 
 > **AI may accelerate engineering work. It must never lower the engineering standard required to accept that work.**
 
-Everything here is `proposed` and nothing is in force. See [Purpose, Scope and Normative Language `AI-PRIN-000`](../principles/purpose-and-scope.md).
+Most documents are `proposed`: followed as written, not yet settled by a decision record, and open to change through the decision process. See [Purpose, Scope and Normative Language `AI-PRIN-000`](../principles/purpose-and-scope.md).
 
 ## One chain
 

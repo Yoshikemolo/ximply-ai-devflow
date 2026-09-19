@@ -38,7 +38,10 @@ Options range from applying it to new repositories only, through applying it to 
 
 ## Provisional position
 
-nothing is enforced until agreed; Part I is proposed first, Part II follows per stack.
+The methodology is in use: [Ximplicity Software Solutions](https://ximplicity.es) applies it in its own products, such as
+[EVIDENT App](https://evidentapp.ai), and in client projects. What remains open is how the scope is set for
+each repository and how enforcement is phased in: Part I applies first, Part II
+follows per stack.
 
 ## How this closes
 

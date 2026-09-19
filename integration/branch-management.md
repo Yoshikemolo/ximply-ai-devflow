@@ -27,7 +27,7 @@ Assisted work happens outside protected branches, whatever those branches are ca
 
 ---
 
-The branching model itself is a team decision, and the one below is simply the model this draft assumes. What the document argues for is narrower: that AI-assisted work happens outside protected branches, whatever those branches are called.
+The branching model itself is a team decision, and the one below is simply the model this framework assumes. What the document argues for is narrower: that AI-assisted work happens outside protected branches, whatever those branches are called.
 
 Assumed model:
 
